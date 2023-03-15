@@ -1,26 +1,59 @@
+:root {
+  --background-dark: #020202;
+  --white: #ffffff;
+  --primary: #6044d8;
+  --primary-light: #9166ff;
+
+  --body-l: 1.25rem;
+  --body: 1rem;
+  --body-s: 0.875rem;
+  --body-xs: 0.75rem;
+  --heading-xl: 4.5rem;
+  --heading-l: 3rem;
+  --heading-m: 2.25rem;
+  --heading-s: 1.5rem;
+  --heading-xs: 1rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --transition: all 150ms ease-in;
+}
+
 html,
 body {
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0 auto;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--background-dark);
+  color: white; /* TODO: DELETE*/
+  max-width: 1215px;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: var(--white);
+}
+
+@media (hover: hover) {
+  a:hover {
+    transition: var(--transition);
+    color: var(--primary-light);
+  }
 }
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

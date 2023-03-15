@@ -1,0 +1,11 @@
+.navMenuButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: 30em) {
+  .navMenuButton {
+    display: none;
+  }
+}

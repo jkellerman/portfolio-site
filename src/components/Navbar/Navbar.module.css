@@ -1,0 +1,72 @@
+.navbarWrapper {
+  margin: 2rem 1.5rem;
+  position: relative;
+}
+
+.menuWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  text-transform: uppercase;
+  font-size: var(--body-l);
+  font-family: "Inter", sans-serif;
+  letter-spacing: -1px;
+  color: var(--white);
+}
+.logo1 {
+  font-weight: var(--fw-bold);
+}
+.logo2 {
+  font-weight: var(--fw-light);
+}
+
+.navMenu {
+  display: none;
+  position: absolute;
+  top: 4.5rem;
+}
+
+.isOpen {
+  display: block;
+}
+
+.navMenuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navListItem {
+  font-size: var(--heading-s);
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.navMenuButton {
+  background: transparent;
+  border: none;
+}
+
+@media (min-width: 30em) {
+  .navMenuButton {
+    display: none;
+  }
+
+  .navMenu {
+    position: unset;
+    display: block;
+  }
+
+  .navMenuList {
+    display: flex;
+  }
+
+  .navListItem {
+    font-size: var(--heading-xs);
+    font-family: "Inter", sans-serif;
+    font-weight: var(--fw-light);
+    margin-left: 2.5rem;
+  }
+}
