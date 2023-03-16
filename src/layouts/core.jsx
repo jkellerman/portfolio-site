@@ -1,9 +1,9 @@
-import Navbar from "@src/components/Navbar/Navbar";
+import Nav from "@src/components/Nav/Nav";
 
 const CoreLayout = ({ children }) => {
   return (
     <>
-      <Navbar />
+      <Nav />
       <>{children}</>
     </>
   );

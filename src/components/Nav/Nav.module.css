@@ -1,6 +1,7 @@
 .navbarWrapper {
-  margin: 2rem 1.5rem;
+  margin: 2rem auto 0;
   position: relative;
+  z-index: 5;
 }
 
 .menuWrapper {
@@ -22,10 +23,25 @@
   font-weight: var(--fw-light);
 }
 
+.colorOverlay {
+  background: linear-gradient(
+    180deg,
+    var(--background-dark) 30%,
+    rgba(128, 128, 128, 0.1) 98%
+  );
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .navMenu {
   display: none;
   position: absolute;
   top: 4.5rem;
+  width: 100%;
 }
 
 .isOpen {
@@ -42,6 +58,7 @@
   font-size: var(--heading-s);
   margin-bottom: 0.5rem;
   letter-spacing: -1px;
+  text-transform: capitalize;
 }
 
 .navMenuButton {
@@ -50,13 +67,15 @@
 }
 
 @media (min-width: 30em) {
-  .navMenuButton {
+  .navMenuButton,
+  .colorOverlay {
     display: none;
   }
 
   .navMenu {
     position: unset;
-    display: block;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .navMenuList {
