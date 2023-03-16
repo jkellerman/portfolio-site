@@ -37,7 +37,7 @@
 .paragraph {
   text-align: center;
   font-size: var(--body-l);
-  color: var(--gray-400);
+  color: var(--gray);
   max-width: 98%;
   margin-bottom: 5rem;
   line-height: 1.75rem;

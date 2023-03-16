@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "@src/components/Hero/Hero";
 import Ticker from "@src/components/Ticker/Ticker";
+import Projects from "@src/components/Projects/Projects";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
 
       <Hero />
       <Ticker />
+      <Projects />
     </>
   );
 }

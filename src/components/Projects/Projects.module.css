@@ -1,0 +1,30 @@
+.heading {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.projects {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1215px;
+}
+
+.projectWrapper {
+  margin-bottom: 2rem;
+}
+
+.projectDetailsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--white);
+  font-size: var(--heading-s);
+  margin-bottom: 0.75rem;
+}
+
+.outline {
+  color: var(--gray);
+  margin-bottom: 1.75rem;
+}
