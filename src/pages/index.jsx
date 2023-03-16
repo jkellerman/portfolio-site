@@ -1,6 +1,6 @@
 import Head from "next/head";
-import styles from "@styles/Home.module.css";
 import Hero from "@src/components/Hero/Hero";
+import Ticker from "@src/components/Ticker/Ticker";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <Ticker />
     </>
   );
 }
