@@ -43,16 +43,6 @@
   line-height: 1.75rem;
 }
 
-.button {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 0.9375rem 2rem;
-  border: none;
-  border-radius: 48px;
-  font-size: var(--body-l);
-  cursor: pointer;
-}
-
 .sphere {
   border-radius: 50%;
   position: absolute;

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: 0 auto;
+  margin: -4rem auto 0;
 }
 
 .heading {
@@ -28,6 +28,7 @@
   overflow-x: hidden;
   position: relative;
   width: 100vw;
+  margin-bottom: 8rem;
 }
 
 .tickerWrapper::before,
@@ -60,12 +61,6 @@
   animation-fill-mode: forwards;
 }
 
-@media (hover: hover) {
-  .tickerWrapper:hover .tickerTrack {
-    animation-play-state: paused;
-  }
-}
-
 .tickerItem {
   font-family: var(--ff-body);
   font-size: var(--heading-l);
@@ -75,7 +70,6 @@
   justify-content: center;
   align-items: center;
   margin-right: 1rem;
-  margin-bottom: 4rem;
 }
 
 .tickerItem::after {

@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import styles from "../Hero/Hero.module.css";
 
 const spheres = [
@@ -31,7 +32,7 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsa,
           fuga, ea delectus qui natus, repellendus odio ut non excepturi
         </p>
-        <button className={styles.button}>See my work</button>
+        <Button>See my work</Button>
       </div>
     </section>
   );

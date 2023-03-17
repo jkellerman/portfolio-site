@@ -5,6 +5,8 @@
   --primary-light: #9166ff;
   --primary-medium-dark: #1c095b;
   --gray: #a1a3bb;
+  --gray-medium: #4d4c64;
+  --gray-dark: #1c1924;
   --ticker: #252437;
   --red-error: #e52510;
 
@@ -15,7 +17,7 @@
 
   --body-xl: 1.25rem;
   --body-l: 1.125rem;
-  --body-m: 1rem
+  --body-m: 1rem;
   --body-s: 0.875rem;
   --body-xs: 0.75rem;
   --heading-xl: 4.5rem;
