@@ -48,9 +48,11 @@
   height: 20;
 }
 
-.icons:hover {
-  stroke: var(--primary-light);
-  transition: var(--transition);
+@media (hover: hover) {
+  .icons:hover {
+    stroke: var(--primary-light);
+    transition: var(--transition);
+  }
 }
 
 .project {

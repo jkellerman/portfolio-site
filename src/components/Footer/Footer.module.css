@@ -1,0 +1,34 @@
+.footer {
+  width: 90%;
+  margin: 0 auto 1rem;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footerLink {
+  color: var(--gray);
+  text-align: center;
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 0.625rem;
+}
+
+@media (hover: hover) {
+  .icon:hover {
+    stroke: var(--primary-light);
+    transition: var(--transition);
+  }
+}
+
+@media (min-width: 48em) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+  }
+}

@@ -1,3 +1,4 @@
+import Footer from "@src/components/Footer/Footer";
 import Nav from "@src/components/Nav/Nav";
 
 const CoreLayout = ({ children }) => {
@@ -5,6 +6,7 @@ const CoreLayout = ({ children }) => {
     <>
       <Nav />
       <>{children}</>
+      <Footer />
     </>
   );
 };
