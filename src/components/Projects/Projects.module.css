@@ -125,9 +125,11 @@
   gap: 0.25rem;
 }
 
-.projectLinkWrapper:hover .arrow {
-  fill: var(--primary-light);
-  transition: var(--transition);
+@media (hover: hover) {
+  .projectLink:hover ~ .arrow {
+    fill: var(--primary-light);
+    transition: var(--transition);
+  }
 }
 
 @media (min-width: 48em) {

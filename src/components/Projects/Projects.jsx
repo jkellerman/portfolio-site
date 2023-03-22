@@ -39,7 +39,9 @@ const Projects = () => {
             <h3 className={styles.title}>{item.title}</h3>
             <span className={styles.outline}>{item.outline}</span>
             <div className={styles.projectLinkWrapper}>
-              <Link href={`/${item.name}`}>View project</Link>
+              <Link href={`/${item.name}`} className={styles.projectLink}>
+                View project
+              </Link>
               <svg
                 id="Layer_1"
                 enableBackground="new 0 0 128 128"

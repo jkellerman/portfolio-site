@@ -1,0 +1,49 @@
+.contactWrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12.5rem 0 8.75rem;
+}
+
+.subheading {
+  color: var(--primary-light);
+}
+
+.emailWrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (hover: hover) {
+  .email:hover ~ .contactArrow > g > line {
+    stroke: var(--primary-light);
+    transition: var(--transition);
+  }
+  .email:hover ~ .contactArrow > g > polyline {
+    stroke: var(--primary-light);
+    transition: var(--transition);
+  }
+}
+.heading,
+.email {
+  color: var(--white);
+  font-size: var(--heading-m);
+}
+
+.contactArrow {
+  width: 50px;
+  height: 50px;
+  transform: translateY(10%);
+}
+
+@media (min-width: 48em) {
+  .heading,
+  .email {
+    font-size: var(--heading-l);
+  }
+
+  .contactArrow {
+    width: 60px;
+    height: 60px;
+  }
+}
