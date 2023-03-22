@@ -58,7 +58,7 @@
     var(--background-dark) 30%,
     rgba(128, 128, 128, 0.1) 98%
   );
-  z-index: 2;
+  z-index: 5;
   width: 100vw;
   min-height: 100%;
   position: fixed;

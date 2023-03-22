@@ -1,10 +1,14 @@
+.outerWrapper {
+  padding: 6rem 0 6rem;
+}
+
 .contentWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: -4rem auto 0;
+  margin: 0 auto;
 }
 
 .heading {
@@ -65,7 +69,7 @@
   font-family: var(--ff-body);
   font-size: var(--heading-l);
   white-space: nowrap;
-  color: var(--ticker);
+  color: var(--gray-medium-dark);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -21,7 +21,7 @@ const TickerItems = [
 
 const Ticker = () => {
   return (
-    <>
+    <div className={styles.outerWrapper}>
       <div className={styles.contentWrapper}>
         <h2 className={styles.heading}>Tech I&apos;m Currently Using</h2>
         <p className={styles.paragraph}>
@@ -45,7 +45,7 @@ const Ticker = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
