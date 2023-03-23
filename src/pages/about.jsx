@@ -28,7 +28,7 @@ const About = () => {
         <div>
           <span className={styles.subheading}>About me</span>
           <h1 className={styles.heading}>
-            I&apos;m Josh, a Front end Developer
+            I&apos;m Josh, a Front End Developer
           </h1>
           <p className={styles.paragraph}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
@@ -36,14 +36,13 @@ const About = () => {
             odio in mollitia voluptatum quas exercitationem. Et eligendi
             deserunt quis voluptatibus culpa, id rem neque inventore
             exercitationem deleniti? Expedita, eum. Facere aperiam voluptates
-            provident expedita ad? Accusamus voluptatum doloribus asperiores
-            saepe corrupti labore aspernatur repellat nesciunt voluptate
-            repudiandae sed laborum ea eligendi perspiciatis ducimus ratione
-            atque modi, enim tenetur eveniet. Nostrum fugiat dolorem rem
-            reprehenderit, inventore dignissimos, ad accusamus alias totam,
-            corporis veniam aliquam distinctio autem dolores illo itaque?
-            Temporibus atque in, quisquam maiores necessitatibus vitae
-            aspernatur culpa, soluta, ratione nemo quae?
+          </p>
+          <p className={styles.paragraph}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+            possimus dignissimos dolores vero ut accusamus quasi quisquam eos,
+            odio in mollitia voluptatum quas exercitationem. Et eligendi
+            deserunt quis voluptatibus culpa, id rem neque inventore
+            exercitationem deleniti? Expedita, eum. Facere aperiam voluptates
           </p>
         </div>
       </div>

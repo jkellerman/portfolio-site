@@ -79,7 +79,7 @@
 }
 
 .sphere:nth-child(4) {
-  background: linear-gradient(90deg, #ffffff 10%, #ffe2bb 98%);
+  background: linear-gradient(90deg, #fadea9 10%, #f7ab47 98%);
   right: 0rem;
   bottom: 10rem;
 }
