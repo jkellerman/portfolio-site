@@ -16,7 +16,7 @@
   color: var(--gray);
   max-width: 80%;
   margin-bottom: 4rem;
-  line-height: 1.75rem;
+  line-height: var(--line-height);
 }
 
 .projectsGrid {

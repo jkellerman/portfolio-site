@@ -26,9 +26,9 @@ const OtherProjects = () => {
     <section className={styles.wrapper}>
       <h2 className={styles.heading}>Other projects</h2>
       <span className={styles.subheading}>
-        Listed below are some of my older or experimental projects, which may
-        contain less effective code, but demonstrate how much I&apos;ve grown as
-        a developer.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        voluptas deserunt iure accusamus doloremque maiores sapiente laudantium
+        voluptatum eius odio!
       </span>
       <ul className={styles.projectsGrid}>
         {slicedArray.map((item) => (

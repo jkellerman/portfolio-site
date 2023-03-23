@@ -1,7 +1,3 @@
-.outerWrapper {
-  padding: 6rem 0 6rem;
-}
-
 .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -23,8 +19,8 @@
   font-size: var(--body-m);
   color: var(--gray);
   max-width: 80%;
-  margin-bottom: 4rem;
-  line-height: 1.75rem;
+  margin-bottom: 8rem;
+  line-height: var(--line-height);
 }
 
 .tickerWrapper {
@@ -32,7 +28,7 @@
   overflow-x: hidden;
   position: relative;
   width: 100vw;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
 }
 
 .tickerWrapper::before,

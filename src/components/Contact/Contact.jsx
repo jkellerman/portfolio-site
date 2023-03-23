@@ -5,7 +5,7 @@ const Contact = () => {
       <span className={styles.subheading}>Let&apos;s collab</span>
       <h1 className={styles.heading}>Got a project? Let&apos;s talk</h1>
       <div className={styles.emailWrapper}>
-        <a href="mailto: jkellerman10@gmail.com" className={styles.email}>
+        <a href="mailto: joshkellerman9@gmail.com" className={styles.email}>
           <span>Email me</span>
           <span>
             <svg

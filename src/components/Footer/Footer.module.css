@@ -20,7 +20,7 @@
 
 @media (hover: hover) {
   .icon:hover {
-    stroke: var(--primary-light);
+    fill: var(--primary-light);
     transition: var(--transition);
   }
 }

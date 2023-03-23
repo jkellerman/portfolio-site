@@ -40,7 +40,7 @@
   color: var(--gray);
   max-width: 98%;
   margin-bottom: 5rem;
-  line-height: 1.75rem;
+  line-height: var(--line-height);
 }
 
 .sphere {
