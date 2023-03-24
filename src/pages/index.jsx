@@ -14,7 +14,6 @@ export default function Home() {
           name="description"
           content="Josh Kellerman, Front End Developer Portfolio"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <Hero />

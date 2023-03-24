@@ -15,7 +15,7 @@ const Nav = () => {
       <header className={styles.navbarWrapper}>
         <div className={styles.navInnerWrapper}>
           <div className={styles.menuWrapper}>
-            <Link href="/">
+            <Link href="/" aria-label="home">
               <div className={styles.logoWrapper}>
                 <span className={styles.logo1}>J</span>
                 <span className={styles.logo2}>K</span>
