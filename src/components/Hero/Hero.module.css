@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 85%;
   max-width: 1215px;
 }
 
@@ -40,7 +40,6 @@
   color: var(--gray);
   max-width: 98%;
   margin-bottom: 5rem;
-  line-height: var(--line-height);
 }
 
 .sphere {

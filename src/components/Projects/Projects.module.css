@@ -5,7 +5,6 @@
 }
 .projects {
   margin: 0 auto;
-  width: 90%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -14,14 +13,14 @@
 }
 
 .projectWrapper {
-  width: 90%;
-  max-width: 320px;
-  margin-bottom: 10rem;
+  width: 85%;
+  max-width: 375px;
+  margin-bottom: 5rem;
 }
 
 .desktopImageWrapper {
   width: 100%;
-  max-width: 320px;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -116,6 +115,7 @@
 .outline {
   color: var(--gray);
   margin-bottom: 1.75rem;
+  line-height: var(--line-height);
 }
 
 .projectLinkWrapper {
@@ -135,6 +135,7 @@
 @media (min-width: 48em) {
   .projectWrapper {
     max-width: 740px;
+    margin-bottom: 10rem;
   }
   .screenshots {
     flex-direction: row;
@@ -154,7 +155,7 @@
 
 @media (min-width: 75em) {
   .projectWrapper {
-    max-width: 1000px;
+    max-width: 800px;
   }
   .mobileImageWrapper {
     width: 270px;

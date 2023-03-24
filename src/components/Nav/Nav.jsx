@@ -12,7 +12,7 @@ const Nav = () => {
   };
   return (
     <>
-      <div className={styles.navbarWrapper}>
+      <header className={styles.navbarWrapper}>
         <div className={styles.navInnerWrapper}>
           <div className={styles.menuWrapper}>
             <Link href="/">
@@ -60,7 +60,7 @@ const Nav = () => {
             </nav>
           </div>
         </div>
-      </div>
+      </header>
       <div className={isOpen ? `${styles.colorOverlay}` : undefined}></div>
       <div className={styles.contentWrapper} style={{ paddingTop: "5rem" }}>
         {/* Your content goes here */}

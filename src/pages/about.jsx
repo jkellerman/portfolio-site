@@ -4,7 +4,7 @@ import { spheres } from "@src/utils/utils";
 import styles from "@styles/about.module.css";
 const About = () => {
   return (
-    <div>
+    <main>
       <div className={styles.aboutContainer}>
         {spheres.map((item) => {
           return (
@@ -47,7 +47,7 @@ const About = () => {
         </div>
       </div>
       <Contact />
-    </div>
+    </main>
   );
 };
 

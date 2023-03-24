@@ -1,0 +1,165 @@
+.main {
+  width: 85%;
+  margin: 1rem auto;
+  position: relative;
+  max-width: 400px;
+}
+
+.heading,
+.headingTop {
+  font-size: var(--heading-s);
+  color: var(--white);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.headingTop {
+  font-size: var(--heading-m);
+}
+
+.screenshotWrapper {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.screenshot {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.contentContainer {
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  color: var(--gray);
+  line-height: var(--line-height);
+  margin-bottom: 1rem;
+}
+
+.tickerWrapper {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  margin-bottom: 1.5rem;
+  white-space: nowrap;
+}
+
+.tickerWrapper::before,
+.tickerWrapper::after {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 10%;
+  z-index: 2;
+  top: 0;
+}
+
+.tickerWrapper::before {
+  left: 0;
+}
+
+.tickerWrapper::after {
+  right: 0;
+  transform: rotateZ(180deg);
+}
+
+.tickerTrack {
+  display: flex;
+  animation: loop 60s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+.tickerItem {
+  color: var(--gray);
+  opacity: 0.8;
+  font-size: var(--body-xs);
+  margin-right: 1rem;
+}
+
+.menuBar {
+  width: 100%;
+  height: 28px;
+  background-color: var(--gray-medium-dark);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  position: relative;
+}
+
+.menuBarButton {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  margin-right: 0.3rem;
+  position: relative;
+  top: 0.7rem;
+  left: 1rem;
+}
+
+.menuBarButton:nth-child(1) {
+  background-color: #ff3b30;
+}
+.menuBarButton:nth-child(2) {
+  background-color: #ffcc00;
+}
+.menuBarButton:nth-child(3) {
+  background-color: #4cd964;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  margin-bottom: 0.75rem;
+}
+
+.projectDetailsContainer {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48em) {
+  .main {
+    max-width: 740px;
+  }
+  .descriptionContainer {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row-reverse;
+  }
+
+  .heading,
+  .headingTop {
+    font-size: var(--heading-m);
+  }
+
+  .headingTop {
+    font-size: var(--heading-l);
+  }
+
+  .projectDetailsContainer {
+    max-width: 40%;
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
