@@ -130,6 +130,30 @@
   margin-bottom: 2rem;
 }
 
+.nav {
+  margin: 2rem 0;
+  font-size: var(--heading-s);
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLink {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (hover: hover) {
+  .navLink:hover,
+  .navLink:hover .arrow {
+    fill: var(--primary-light);
+    color: var(--primary-light);
+    transition: var(--transition);
+  }
+}
+
 @media (min-width: 48em) {
   .main {
     max-width: 740px;
@@ -151,6 +175,11 @@
 
   .projectDetailsContainer {
     max-width: 40%;
+  }
+
+  .nav {
+    margin: 4rem 0;
+    font-size: var(--heading-s);
   }
 }
 

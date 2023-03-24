@@ -34,11 +34,11 @@ export const ProjectList = [
     github: "https://github.com/jkellerman/Planet-viewer",
     stack: [
       { id: 1, name: "Netlify" },
-      { id: 2, name: "Model-Viewer" },
+      { id: 2, name: "Styled-Components" },
       { id: 3, name: "React" },
       { id: 4, name: "TypeScript" },
       { id: 5, name: "Framer Motion" },
-      { id: 6, name: "Styled-Components" },
+      { id: 6, name: "Model-viewer" },
     ],
   },
   {
