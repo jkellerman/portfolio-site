@@ -63,7 +63,38 @@ const Project = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Live
+                  <span>View Live</span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    focusable="false"
+                    className={styles.externalArrow}
+                    width={20}
+                    height={20}
+                  >
+                    <g weight="bold">
+                      <line
+                        x1="64"
+                        y1="192"
+                        x2="192"
+                        y2="64"
+                        fill="none"
+                        stroke="#FFF"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="24"
+                      ></line>
+                      <polyline
+                        points="88 64 192 64 192 168"
+                        fill="none"
+                        stroke="#FFF"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="24"
+                      ></polyline>
+                    </g>
+                  </svg>
                 </a>
               )}
               <a
@@ -72,7 +103,38 @@ const Project = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Code
+                <span>View Code</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  focusable="false"
+                  className={styles.externalArrow}
+                  width={20}
+                  height={20}
+                >
+                  <g weight="bold">
+                    <line
+                      x1="64"
+                      y1="192"
+                      x2="192"
+                      y2="64"
+                      fill="none"
+                      stroke="#FFF"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
+                    ></line>
+                    <polyline
+                      points="88 64 192 64 192 168"
+                      fill="none"
+                      stroke="#FFF"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="24"
+                    ></polyline>
+                  </g>
+                </svg>
               </a>
             </div>
           </div>
@@ -107,7 +169,7 @@ const Project = () => {
           <ul className={styles.navList}>
             <li>
               <Link
-                href={`/projects/${
+                href={`/project/${
                   project && project.id === 1
                     ? ProjectList.length
                     : project && project.id - 1
@@ -134,7 +196,7 @@ const Project = () => {
             </li>
             <li>
               <Link
-                href={`/projects/${
+                href={`/project/${
                   project && project.id === ProjectList.length
                     ? ProjectList[0].id
                     : project && project.id + 1

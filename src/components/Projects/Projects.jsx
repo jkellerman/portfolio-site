@@ -39,7 +39,7 @@ const Projects = () => {
             <h3 className={styles.title}>{item.title}</h3>
             <p className={styles.outline}>{item.outline}</p>
             <div className={styles.projectLinkWrapper}>
-              <Link href={`projects/${item.id}`} className={styles.projectLink}>
+              <Link href={`project/${item.id}`} className={styles.projectLink}>
                 View project
               </Link>
               <svg
