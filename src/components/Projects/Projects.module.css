@@ -18,44 +18,6 @@
   margin-bottom: 5rem;
 }
 
-.desktopImageWrapper {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.menuBar {
-  width: 100%;
-  height: 28px;
-  background-color: var(--gray-medium-dark);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  display: flex;
-  position: relative;
-}
-
-.menuBarButton {
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  margin-right: 0.3rem;
-  position: relative;
-  top: 0.7rem;
-  left: 1rem;
-}
-
-.menuBarButton:nth-child(1) {
-  background-color: #ff3b30;
-}
-.menuBarButton:nth-child(2) {
-  background-color: #ffcc00;
-}
-.menuBarButton:nth-child(3) {
-  background-color: #4cd964;
-}
-
 .screenshots {
   display: flex;
   flex-direction: column;
@@ -66,38 +28,6 @@
 
 .projects .projectWrapper:nth-of-type(2) .screenshots {
   flex-direction: column-reverse;
-}
-
-.screenshotDesktopWrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.screenshotDesktop {
-  width: 100%;
-  object-fit: contain;
-  height: 100%;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.mobileImageWrapper {
-  width: 193px;
-  height: auto;
-  border-radius: 15px;
-}
-
-.screenshotMobileWrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.screenshotMobile {
-  width: 100%;
-  object-fit: contain;
-  height: 100%;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 .projectDetailsWrapper {
@@ -146,54 +76,10 @@
   .projects .projectWrapper:nth-of-type(2) .screenshots {
     flex-direction: row-reverse;
   }
-
-  .desktopImageWrapper {
-    max-width: unset;
-    width: 550px;
-  }
 }
 
 @media (min-width: 75em) {
   .projectWrapper {
     max-width: 800px;
-  }
-  .mobileImageWrapper {
-    width: 270px;
-  }
-
-  .desktopImageWrapper {
-    width: 750px;
-    border-radius: 25px;
-  }
-
-  .mobileImageWrapper {
-    border-radius: 25px;
-  }
-
-  .menuBar {
-    height: 35px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-  }
-
-  .menuBarButton {
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    margin-right: 0.3rem;
-    position: relative;
-    top: 0.9rem;
-    left: 1.25rem;
-  }
-
-  .screenshotDesktop {
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-
-  .screenshotMobile {
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
   }
 }

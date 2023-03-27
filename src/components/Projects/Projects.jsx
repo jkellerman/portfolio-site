@@ -2,6 +2,8 @@ import Link from "next/link";
 import styles from "../Projects/Projects.module.css";
 import { ProjectList } from "@src/data/Projects";
 import Image from "next/image";
+import DesktopScreenshot from "../DesktopScreenshot/DesktopScreenshot";
+import MobileScreenshot from "../MobileScreenshot/MobileScreenshot";
 
 const Projects = () => {
   return (
@@ -10,38 +12,8 @@ const Projects = () => {
       {ProjectList.map((item) => (
         <div key={item.id} className={styles.projectWrapper}>
           <div className={styles.screenshots}>
-            <div className={styles.desktopImageWrapper}>
-              <div className={styles.menuBar}>
-                <div className={styles.menuBarButton}></div>
-                <div className={styles.menuBarButton}></div>
-                <div className={styles.menuBarButton}></div>
-              </div>
-              <div className={styles.screenshotDesktopWrapper}>
-                <Image
-                  src={item.desktop}
-                  alt="app screenshot"
-                  className={styles.screenshotDesktop}
-                  width={3024}
-                  height={1940}
-                  sizes="(max-width: 48em) 100vw,
-                  66vw"
-                />
-              </div>
-            </div>
-            <div className={styles.mobileImageWrapper}>
-              <div className={styles.menuBar}></div>
-              <div className={styles.screenshotMobileWrapper}>
-                <Image
-                  src={item.mobile}
-                  alt="app screenshot"
-                  className={styles.screenshotMobile}
-                  width={750}
-                  height={1334}
-                  sizes="(max-width: 48em) 75vw,
-                  33vw"
-                />
-              </div>
-            </div>
+            <DesktopScreenshot image={item.desktop} />
+            <MobileScreenshot image={item.mobile} />
           </div>
           <div className={styles.projectDetailsWrapper}>
             <h3 className={styles.title}>{item.title}</h3>
