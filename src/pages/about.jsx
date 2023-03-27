@@ -3,6 +3,7 @@ import Head from "next/head";
 import Contact from "@src/components/Contact/Contact";
 import { spheres } from "@src/utils/utils";
 import styles from "@styles/about.module.css";
+import Image from "next/image";
 const About = () => {
   return (
     <>
@@ -28,10 +29,15 @@ const About = () => {
             );
           })}
           <div className={styles.imageWrapper}>
-            <img
+            <Image
               src="/assets/josh.webp"
               alt="Image of Josh Kellerman"
               className={styles.image}
+              width={1200}
+              height={1600}
+              priority
+              sizes="(max-width: 48em) 85vw,
+              66vw"
             />
           </div>
           <div>

@@ -1,16 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import styles from "@styles/projects.module.css";
+import styles from "@styles/project.module.css";
 import { ProjectList } from "@src/data/Projects";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
+import img from "@/public/assets/reelgood-desktop.webp";
 
 const Project = () => {
-  const router = useRouter();
-  const { query } = router;
-  const project = ProjectList.find(
-    (project) => project.id.toString() === query.id
-  );
   return (
     <>
       <Head>
@@ -28,37 +23,40 @@ const Project = () => {
               <div className={styles.menuBarButton}></div>
               <div className={styles.menuBarButton}></div>
             </div>
-            <img
-              src={project && project.desktop}
-              alt={project && `${project.name} screenshot`}
+
+            <Image
+              src={img}
+              alt="/reelgood web app"
               className={styles.screenshot}
+              priority
+              sizes="(max-width: 48em) 85vw,
+              66vw"
             />
           </div>
+
           <div className={styles.projectDetailsContainer}>
-            <h1 className={styles.headingTop}>{project && project.name}</h1>
-            <p className={styles.paragraph}>{project && project.overview}</p>
+            <h1 className={styles.headingTop}>{ProjectList[0].name}</h1>
+            <p className={styles.paragraph}>{ProjectList[0].overview}</p>
             <div className={styles.tickerWrapper}>
               <div className={styles.tickerTrack}>
-                {project &&
-                  project.stack.map((tech) => (
-                    <span key={tech.id} className={styles.tickerItem}>
-                      {tech.name}
-                    </span>
-                  ))}
+                {ProjectList[0].stack.map((tech) => (
+                  <span key={tech.id} className={styles.tickerItem}>
+                    {tech.name}
+                  </span>
+                ))}
               </div>
               <div className={styles.tickerTrack}>
-                {project &&
-                  project.stack.map((tech) => (
-                    <span key={tech.id} className={styles.tickerItem}>
-                      {tech.name}
-                    </span>
-                  ))}
+                {ProjectList[0].stack.map((tech) => (
+                  <span key={tech.id} className={styles.tickerItem}>
+                    {tech.name}
+                  </span>
+                ))}
               </div>
             </div>
             <div className={styles.linksContainer}>
-              {project && project.link && (
+              {ProjectList[0].link && (
                 <a
-                  href={project && project.link}
+                  href={ProjectList[0].link}
                   className={styles.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -98,7 +96,7 @@ const Project = () => {
                 </a>
               )}
               <a
-                href={project && project.github}
+                href={ProjectList[0].github}
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -168,14 +166,7 @@ const Project = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li>
-              <Link
-                href={`/project/${
-                  project && project.id === 1
-                    ? ProjectList.length
-                    : project && project.id - 1
-                }`}
-                className={styles.navLink}
-              >
+              <Link href="/project/billy" className={styles.navLink}>
                 {" "}
                 <span>
                   <svg
@@ -195,14 +186,7 @@ const Project = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href={`/project/${
-                  project && project.id === ProjectList.length
-                    ? ProjectList[0].id
-                    : project && project.id + 1
-                }`}
-                className={styles.navLink}
-              >
+              <Link href="/project/planetviewer" className={styles.navLink}>
                 <span>Next</span>
                 <span>
                   {" "}

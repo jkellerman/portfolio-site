@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import styles from "../Projects/Projects.module.css";
 import { ProjectList } from "@src/data/Projects";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -17,20 +17,28 @@ const Projects = () => {
                 <div className={styles.menuBarButton}></div>
               </div>
               <div className={styles.screenshotDesktopWrapper}>
-                <img
+                <Image
                   src={item.desktop}
                   alt="app screenshot"
                   className={styles.screenshotDesktop}
+                  width={3024}
+                  height={1940}
+                  sizes="(max-width: 48em) 100vw,
+                  66vw"
                 />
               </div>
             </div>
             <div className={styles.mobileImageWrapper}>
               <div className={styles.menuBar}></div>
               <div className={styles.screenshotMobileWrapper}>
-                <img
+                <Image
                   src={item.mobile}
                   alt="app screenshot"
                   className={styles.screenshotMobile}
+                  width={750}
+                  height={1334}
+                  sizes="(max-width: 48em) 75vw,
+                  33vw"
                 />
               </div>
             </div>
