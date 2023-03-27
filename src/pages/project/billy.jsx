@@ -4,6 +4,7 @@ import { ProjectList } from "@src/data/Projects";
 import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/assets/billy-desktop.webp";
+import background from "@/public/assets/bg-3.webp";
 
 const Project = () => {
   return (
@@ -15,6 +16,15 @@ const Project = () => {
           content="Josh Kellerman Projects , Front End Developer"
         />
       </Head>
+      <div className={styles.backgroundWrapper}>
+        <Image
+          src={background}
+          alt="background"
+          sizes="100vw"
+          className={styles.background}
+          priority
+        />
+      </div>
       <main className={styles.main}>
         <section className={styles.descriptionContainer}>
           <div className={styles.screenshotWrapper}>
