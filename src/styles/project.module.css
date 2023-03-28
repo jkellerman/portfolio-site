@@ -1,6 +1,6 @@
 .descriptionContainer {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .backgroundWrapper {
@@ -10,6 +10,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .background {
@@ -20,7 +21,7 @@
 
 .main {
   width: 85%;
-  margin: 15rem auto 1rem;
+  margin: 1rem auto 1rem;
   position: relative;
   max-width: 400px;
 }
@@ -189,6 +190,9 @@
 }
 
 @media (min-width: 48em) {
+  .backgroundWrapper {
+    display: block;
+  }
   .main {
     max-width: 740px;
     margin-top: 17.5rem;

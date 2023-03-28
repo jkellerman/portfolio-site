@@ -40,6 +40,7 @@ const Project = () => {
               className={styles.screenshot}
               sizes="(max-width: 48em) 85vw,
               66vw"
+              priority
             />
           </div>
 
@@ -55,7 +56,7 @@ const Project = () => {
                 ))}
               </div>
               <div className={styles.tickerTrack}>
-                {ProjectList[0].stack.map((tech) => (
+                {ProjectList[1].stack.map((tech) => (
                   <span key={tech.id} className={styles.tickerItem}>
                     {tech.name}
                   </span>

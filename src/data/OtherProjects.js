@@ -74,7 +74,7 @@ export const OtherProjectsLists = [
     stack: [
       { id: 1, name: "HTML" },
       { id: 2, name: "CSS" },
-      { id: 3, name: "JavaScipt" },
+      { id: 3, name: "JavaScript" },
     ],
   },
   {
@@ -87,7 +87,7 @@ export const OtherProjectsLists = [
     stack: [
       { id: 1, name: "HTML" },
       { id: 2, name: "CSS" },
-      { id: 3, name: "JavaScipt" },
+      { id: 3, name: "JavaScript" },
     ],
   },
   {

@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Contact from "@src/components/Contact/Contact";
-import { spheres } from "@src/utils/utils";
 import styles from "@styles/about.module.css";
 import Image from "next/image";
+import img from "@/public/assets/sphere.webp";
+
 const About = () => {
   return (
     <>
@@ -16,18 +16,14 @@ const About = () => {
       </Head>
       <main>
         <div className={styles.aboutContainer}>
-          {spheres.map((item) => {
-            return (
-              <div
-                key={item.id}
-                style={{
-                  width: item.width,
-                  height: item.height,
-                }}
-                className={styles.sphere}
-              ></div>
-            );
-          })}
+          <div className={styles.sphere}></div>
+          <div className={styles.sphere}>
+            <Image src={img} alt="" />
+          </div>
+          <div className={styles.sphere}>
+            <Image src={img} alt="" />
+          </div>
+          <div className={styles.sphere}></div>
           <div className={styles.imageWrapper}>
             <Image
               src="/assets/josh.webp"
