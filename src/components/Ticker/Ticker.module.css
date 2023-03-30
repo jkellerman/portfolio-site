@@ -28,7 +28,7 @@
   overflow-x: hidden;
   position: relative;
   width: 100vw;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
 }
 
 .tickerWrapper::before,
@@ -57,7 +57,7 @@
 
 .tickerTrack {
   display: flex;
-  animation: loop 60s linear infinite;
+  animation: loop 100s linear infinite;
   animation-fill-mode: forwards;
 }
 

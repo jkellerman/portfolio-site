@@ -47,11 +47,11 @@
 }
 .logo1 {
   font-weight: var(--fw-bold);
-  margin-right: 0.1rem;
+  margin-right: 0.15rem;
 }
 .logo2 {
   font-weight: var(--fw-light);
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .colorOverlay {

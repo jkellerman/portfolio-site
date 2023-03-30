@@ -32,6 +32,7 @@
   bottom: 9rem;
   width: 16px;
   height: 16px;
+  transform: rotate(180deg);
 }
 
 .sphere:nth-child(4) {
@@ -42,6 +43,62 @@
   );
   right: 0rem;
   bottom: 10rem;
+  width: 20px;
+  height: 20px;
+}
+
+.sphereAbout {
+  border-radius: 50%;
+  position: absolute;
+}
+.sphereAbout img {
+  width: 100%;
+  height: 100%;
+}
+
+.sphereAbout:nth-child(1) {
+  background: linear-gradient(
+    -89.8186deg,
+    rgb(140, 120, 241) 0%,
+    rgb(255, 189, 232) 100%
+  );
+  box-shadow: 0px 1px 32px 0px rgb(149, 128, 248);
+  left: 1rem;
+  top: -6rem;
+  z-index: 2;
+  /* display: none; */
+  width: 32px;
+  height: 32px;
+}
+.sphereAbout:nth-child(2) {
+  background: linear-gradient(
+    294deg,
+    #a91cdc 30%,
+    var(--primary-medium-dark) 98%
+  );
+  right: 7rem;
+  top: -1rem;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+}
+.sphereAbout:nth-child(3) {
+  left: 4rem;
+  bottom: -4rem;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+.sphereAbout:nth-child(4) {
+  background: linear-gradient(
+    142.001deg,
+    rgb(255, 226, 187) 0%,
+    rgb(255, 149, 91) 100%
+  );
+  right: 0rem;
+  bottom: 0rem;
   width: 20px;
   height: 20px;
 }
@@ -81,6 +138,10 @@
   }
   .sphere:nth-child(4) {
     bottom: 14rem;
+  }
+  .sphereAbout:nth-child(1),
+  .sphereAbout:nth-child(2) {
+    display: block;
   }
 }
 

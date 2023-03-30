@@ -1,10 +1,25 @@
 import Image from "next/image";
 import styles from "../MobileScreenshot/MobileScreenshot.module.css";
+import { motion } from "framer-motion";
+import { variants } from "@src/utils/framer";
 
 const MobileScreenshot = ({ image }) => {
   return (
     <>
-      <div className={styles.mobileImageWrapper}>
+      <motion.div
+        className={styles.mobileImageWrapper}
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: "some" }}
+        transition={{
+          type: "spring",
+          stiffness: 160,
+          delay: 0.2,
+          mass: 1,
+          damping: 60,
+        }}
+      >
         <div className={styles.menuBar}></div>
         <div className={styles.screenshotMobileWrapper}>
           <Image
@@ -17,7 +32,7 @@ const MobileScreenshot = ({ image }) => {
                   33vw"
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

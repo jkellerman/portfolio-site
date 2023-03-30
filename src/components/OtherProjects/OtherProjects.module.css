@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 85%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 14.5rem;
 }
 .heading {
   color: var(--primary-light);
@@ -97,6 +97,16 @@
   color: var(--gray);
   opacity: 0.8;
   font-size: var(--body-xs);
+}
+
+.button {
+  background-color: var(--white);
+  color: black;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 48px;
+  font-size: var(--body-s);
+  cursor: pointer;
 }
 
 @media (max-width: 20em) {

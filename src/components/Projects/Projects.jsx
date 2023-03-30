@@ -1,21 +1,50 @@
 import Link from "next/link";
 import styles from "../Projects/Projects.module.css";
 import { ProjectList } from "@src/data/Projects";
-import Image from "next/image";
 import DesktopScreenshot from "../DesktopScreenshot/DesktopScreenshot";
 import MobileScreenshot from "../MobileScreenshot/MobileScreenshot";
+import { motion } from "framer-motion";
+import { containerVariants, variants } from "@src/utils/framer";
 
 const Projects = () => {
   return (
     <section className={styles.projects}>
-      <h2 className={styles.heading}>What I&apos;ve been working on </h2>
+      <motion.h2
+        className={styles.heading}
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: "all" }}
+        transition={{
+          type: "spring",
+          stiffness: 160,
+          mass: 1,
+          damping: 60,
+          staggerChildren: 0.4,
+        }}
+      >
+        What I&apos;ve been working on{" "}
+      </motion.h2>
       {ProjectList.map((item) => (
         <div key={item.id} className={styles.projectWrapper}>
           <div className={styles.screenshots}>
             <DesktopScreenshot image={item.desktop} />
             <MobileScreenshot image={item.mobile} />
           </div>
-          <div className={styles.projectDetailsWrapper}>
+          <motion.div
+            className={styles.projectDetailsWrapper}
+            variants={variants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              type: "spring",
+              stiffness: 320,
+              mass: 1,
+              damping: 40,
+              staggerChildren: 0.4,
+            }}
+            viewport={{ once: true, amount: "some" }}
+          >
             <h3 className={styles.title}>{item.title}</h3>
             <p className={styles.outline}>{item.outline}</p>
             <div className={styles.projectLinkWrapper}>
@@ -41,7 +70,7 @@ const Projects = () => {
                 />
               </svg>
             </div>
-          </div>
+          </motion.div>
         </div>
       ))}
     </section>

@@ -3,7 +3,8 @@ import { OtherProjectsLists } from "@src/data/OtherProjects";
 import Image from "next/image";
 import folder from "@/public/assets/folder-solid.svg";
 import { useState } from "react";
-import Button from "../Button/Button";
+import { motion } from "framer-motion";
+import { containerVariants, variants } from "@src/utils/framer";
 
 const OtherProjects = () => {
   const [numToShow, setNumToShow] = useState(3);
@@ -30,9 +31,21 @@ const OtherProjects = () => {
         voluptas deserunt iure accusamus doloremque maiores sapiente laudantium
         voluptatum eius odio!
       </span>
-      <ul className={styles.projectsGrid}>
+      <motion.ul className={styles.projectsGrid}>
         {slicedArray.map((item) => (
-          <li key={item.id} className={styles.project}>
+          <motion.li
+            key={item.id}
+            className={styles.project}
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              mass: 1,
+              damping: 40,
+            }}
+            viewport={{ once: true, amount: "some" }}
+          >
             <header>
               <div className={styles.projectTop}>
                 <Image src={folder} alt="folder-icon" width={25} height={25} />
@@ -101,12 +114,18 @@ const OtherProjects = () => {
                 </span>
               ))}
             </footer>
-          </li>
+          </motion.li>
         ))}
-      </ul>
-      <Button handleClick={handleClick}>
+      </motion.ul>
+      <motion.button
+        className={styles.button}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        variants={containerVariants}
+        onClick={handleClick}
+      >
         {numToShow === 9 ? "Show less" : "Show more"}
-      </Button>
+      </motion.button>
     </section>
   );
 };

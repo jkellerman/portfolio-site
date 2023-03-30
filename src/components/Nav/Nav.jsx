@@ -2,6 +2,7 @@ import styles from "../Nav/Nav.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import MenuButton from "../NavMenuButton/NavMenuButton";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,12 +11,21 @@ const Nav = () => {
     setIsOpen(!isOpen);
     document.body.classList.toggle("no-scroll");
   };
+  const closeMenu = () => {
+    setIsOpen(false);
+    document.body.classList.remove("no-scroll");
+  };
   return (
     <>
       <header className={styles.navbarWrapper}>
-        <div className={styles.navInnerWrapper}>
+        <motion.div
+          className={styles.navInnerWrapper}
+          initial={{ y: "-150%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 120, damping: 30, mass: 1 }}
+        >
           <div className={styles.menuWrapper}>
-            <Link href="/" aria-label="home">
+            <Link href="/" aria-label="home" onClick={closeMenu}>
               <div className={styles.logoWrapper}>
                 <span className={styles.logo1}>Josh</span>
                 <span className={styles.logo2}>Portfolio</span>
@@ -42,7 +52,7 @@ const Nav = () => {
                   <Link
                     href="/about"
                     className={styles.navListItem}
-                    onClick={toggleMenu}
+                    onClick={closeMenu}
                   >
                     about
                   </Link>
@@ -51,7 +61,6 @@ const Nav = () => {
                   <a
                     href="mailto: joshkellerman9@gmail.com"
                     className={styles.navListItem}
-                    onClick={toggleMenu}
                   >
                     Contact
                   </a>
@@ -59,7 +68,7 @@ const Nav = () => {
               </ul>
             </nav>
           </div>
-        </div>
+        </motion.div>
       </header>
       <div className={isOpen ? `${styles.colorOverlay}` : undefined}></div>
       <div className={styles.contentWrapper} style={{ paddingTop: "5rem" }}>

@@ -1,11 +1,26 @@
 import styles from "../DesktopScreenshot/DesktopScreenshot.module.css";
 import Image from "next/image";
 import MenuBar from "../MenuBar/MenuBar";
+import { motion } from "framer-motion";
+import { variants } from "@src/utils/framer";
 
 const DesktopScreenshot = ({ image }) => {
   return (
     <>
-      <div className={styles.desktopImageWrapper}>
+      <motion.div
+        className={styles.desktopImageWrapper}
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          type: "spring",
+          stiffness: 160,
+          delay: 0.1,
+          mass: 1,
+          damping: 60,
+        }}
+        viewport={{ once: true, amount: "some" }}
+      >
         <MenuBar />
         <div className={styles.screenshotDesktopWrapper}>
           <Image
@@ -18,7 +33,7 @@ const DesktopScreenshot = ({ image }) => {
                   66vw"
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

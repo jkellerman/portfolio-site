@@ -1,10 +1,23 @@
 import styles from "../Contact/Contact.module.css";
+import { motion } from "framer-motion";
+import { containerVariants } from "@src/utils/framer";
+
 const Contact = () => {
   return (
-    <section className={styles.contactWrapper}>
-      <span className={styles.subheading}>Let&apos;s collab</span>
-      <h1 className={styles.heading}>Got a project? Let&apos;s talk</h1>
-      <div className={styles.emailWrapper}>
+    <motion.section
+      className={styles.contactWrapper}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: "some" }}
+    >
+      <motion.span className={styles.subheading} variants={containerVariants}>
+        Let&apos;s collab
+      </motion.span>
+      <motion.h1 className={styles.heading} variants={containerVariants}>
+        Got a project? Let&apos;s talk
+      </motion.h1>
+      <motion.div className={styles.emailWrapper} variants={containerVariants}>
         <a href="mailto: joshkellerman9@gmail.com" className={styles.email}>
           <span>Email me</span>
           <span>
@@ -38,8 +51,8 @@ const Contact = () => {
             </svg>
           </span>
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -4,6 +4,7 @@ import Ticker from "@src/components/Ticker/Ticker";
 import Projects from "@src/components/Projects/Projects";
 import OtherProjects from "@src/components/OtherProjects/OtherProjects";
 import Contact from "@src/components/Contact/Contact";
+import Nav from "@src/components/Nav/Nav";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           content="Josh Kellerman, Front End Developer Portfolio"
         />
       </Head>
+      <Nav />
       <main>
         <Hero />
         <Ticker />
