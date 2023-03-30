@@ -4,7 +4,7 @@
   margin-bottom: 4rem;
 }
 .projects {
-  margin: 0 auto;
+  margin: 4rem auto;
   max-width: 1200px;
   display: flex;
   flex-direction: column;

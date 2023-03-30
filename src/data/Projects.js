@@ -37,8 +37,8 @@ export const ProjectList = [
       { id: 2, name: "Styled-Components" },
       { id: 3, name: "React" },
       { id: 4, name: "TypeScript" },
-      { id: 5, name: "Framer Motion" },
-      { id: 6, name: "Model-viewer" },
+      { id: 5, name: "Model-viewer" },
+      { id: 6, name: "Framer Motion" },
     ],
   },
   {

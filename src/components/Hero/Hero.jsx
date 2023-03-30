@@ -3,7 +3,7 @@ import Spheres from "../Spheres/Spheres";
 import { motion } from "framer-motion";
 import { containerVariants } from "@src/utils/framer";
 import Image from "next/image";
-import img from "@/public/assets/memoji.png";
+import img from "@/public/assets/icon.png";
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
             src={img}
             alt="josh kellerman"
             priority
-            sizes="100vw"
+            sizes="30vw"
             className={styles.image}
           />
         </motion.div>

@@ -96,7 +96,7 @@
 
 .tickerTrack {
   display: flex;
-  animation: loop 60s linear infinite;
+  animation: loop 20s linear infinite;
   animation-fill-mode: forwards;
 }
 

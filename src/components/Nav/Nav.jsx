@@ -20,7 +20,7 @@ const Nav = () => {
       <header className={styles.navbarWrapper}>
         <motion.div
           className={styles.navInnerWrapper}
-          initial={{ y: "-150%", opacity: 0 }}
+          initial={{ y: -150, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 30, mass: 1 }}
         >
