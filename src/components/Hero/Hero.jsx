@@ -1,14 +1,37 @@
-import Button from "../Button/Button";
 import styles from "../Hero/Hero.module.css";
 import Spheres from "../Spheres/Spheres";
 import { motion } from "framer-motion";
 import { containerVariants } from "@src/utils/framer";
+import Image from "next/image";
+import img from "@/public/assets/memoji.png";
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.heroWrapper}>
         <Spheres />
+        <motion.div
+          className={styles.imageWrapper}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{
+            scale: 1,
+            opacity: 1,
+            transition: {
+              type: "spring",
+              stiffness: 160,
+              damping: 40,
+              mass: 1,
+            },
+          }}
+        >
+          <Image
+            src={img}
+            alt="josh kellerman"
+            priority
+            sizes="100vw"
+            className={styles.image}
+          />
+        </motion.div>
         <motion.div
           variants={containerVariants}
           initial="hidden"

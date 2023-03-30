@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 import { variants } from "@src/utils/framer";
 
 const TickerItems = [
+  { id: 1, name: "SCSS" },
   { id: 2, name: "CSS" },
-  { id: 3, name: "SCSS" },
-  { id: 4, name: "JavaScript" },
-  { id: 5, name: "React" },
-  { id: 6, name: "Next.js" },
-  { id: 7, name: "TypeScript" },
-  { id: 8, name: "Firebase" },
-  { id: 12, name: "GraphQL" },
-  { id: 11, name: "React Query" },
-  { id: 13, name: "Jest" },
-  { id: 14, name: "RTL" },
-  { id: 9, name: "Framer Motion" },
-  { id: 15, name: "Vercel" },
-  { id: 16, name: "Netlify" },
-  { id: 17, name: "Git" },
-  { id: 18, name: "Storybook" },
+  { id: 3, name: "JavaScript" },
+  { id: 4, name: "React" },
+  { id: 5, name: "Next.js" },
+  { id: 6, name: "TypeScript" },
+  { id: 7, name: "GraphQL" },
+  { id: 8, name: "React Query" },
+  { id: 9, name: "Jest" },
+  { id: 10, name: "RTL" },
+  { id: 11, name: "Framer Motion" },
+  { id: 12, name: "Firebase" },
+  { id: 13, name: "Vercel" },
+  { id: 14, name: "Netlify" },
+  { id: 15, name: "Git" },
+  { id: 16, name: "Storybook" },
 ];
 
 const Ticker = () => {

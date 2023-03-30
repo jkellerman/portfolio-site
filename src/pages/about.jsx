@@ -6,6 +6,7 @@ import Nav from "@src/components/Nav/Nav";
 import Spheres from "@src/components/Spheres/Spheres";
 import { motion } from "framer-motion";
 import { variants } from "@src/utils/framer";
+import img from "@/public/assets/josh.webp";
 
 const About = () => {
   return (
@@ -35,11 +36,9 @@ const About = () => {
             }}
           >
             <Image
-              src="/assets/josh.webp"
-              alt="Image of Josh Kellerman"
+              src={img}
+              alt="Josh Kellerman"
               className={styles.image}
-              width={1200}
-              height={1600}
               priority
               sizes="(max-width: 48em) 85vw,
               66vw"

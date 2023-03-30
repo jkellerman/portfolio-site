@@ -33,14 +33,12 @@
 
 .imageWrapper {
   position: relative;
-}
 
-.imageWrapper {
   width: 100%;
   height: auto;
-  max-width: 400px;
+  max-width: auto;
   border-radius: 25px;
-  max-height: 537px;
+  max-height: 437px;
 }
 
 .image {
@@ -83,7 +81,7 @@
   }
 
   .image {
-    width: 400px;
-    height: 533.33px;
+    width: 375px;
+    height: 435px;
   }
 }

@@ -4,7 +4,7 @@ import { ProjectList } from "@src/data/Projects";
 import DesktopScreenshot from "../DesktopScreenshot/DesktopScreenshot";
 import MobileScreenshot from "../MobileScreenshot/MobileScreenshot";
 import { motion } from "framer-motion";
-import { containerVariants, variants } from "@src/utils/framer";
+import { variants } from "@src/utils/framer";
 
 const Projects = () => {
   return (
@@ -40,7 +40,7 @@ const Projects = () => {
               type: "spring",
               stiffness: 320,
               mass: 1,
-              damping: 40,
+              damping: 60,
               staggerChildren: 0.4,
             }}
             viewport={{ once: true, amount: "some" }}

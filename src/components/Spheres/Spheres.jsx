@@ -13,8 +13,8 @@ const variants = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 262,
-      damping: 31,
+      stiffness: 160,
+      damping: 40,
       mass: 1,
     },
   },

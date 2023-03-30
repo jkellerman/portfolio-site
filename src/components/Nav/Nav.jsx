@@ -71,9 +71,10 @@ const Nav = () => {
         </motion.div>
       </header>
       <div className={isOpen ? `${styles.colorOverlay}` : undefined}></div>
-      <div className={styles.contentWrapper} style={{ paddingTop: "5rem" }}>
-        {/* Your content goes here */}
-      </div>
+      <div
+        className={styles.contentWrapper}
+        style={{ paddingTop: "5rem" }}
+      ></div>
     </>
   );
 };
