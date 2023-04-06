@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 82vh;
+}
+
+.heading {
+  margin-bottom: 1rem;
+  font-size: var(--heading-l);
+  text-align: center;
+  letter-spacing: -1px;
+  max-width: 85%;
+  color: var(--white);
+}
+
+.subheading {
+  font-family: var(--ff-heading);
+  font-size: var(--heading-xs);
+  color: var(--primary-light);
+  text-align: center;
+}

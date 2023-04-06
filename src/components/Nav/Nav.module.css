@@ -30,7 +30,7 @@
 
 .navInnerWrapper {
   min-width: 85%;
-  max-width: 1200px;
+  max-width: 1255px;
 }
 
 .menuWrapper {
@@ -123,6 +123,6 @@
 
 @media (min-width: 80em) {
   .navInnerWrapper {
-    min-width: 1200px;
+    min-width: 1250px;
   }
 }
