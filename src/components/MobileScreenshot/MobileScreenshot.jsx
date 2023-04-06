@@ -14,10 +14,10 @@ const MobileScreenshot = ({ image }) => {
         viewport={{ once: true, amount: "some" }}
         transition={{
           type: "spring",
-          stiffness: 160,
-          delay: 0.2,
+          stiffness: 200,
+          delay: 0.1,
           mass: 1,
-          damping: 60,
+          damping: 40,
         }}
       >
         <div className={styles.menuBar}></div>

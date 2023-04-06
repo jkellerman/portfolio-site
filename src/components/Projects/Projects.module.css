@@ -1,7 +1,18 @@
 .heading {
   color: var(--primary-light);
   text-align: center;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  font-size: var(--heading-m);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.heading1 {
+  color: var(--gray-medium-dark);
+}
+.heading2 {
+  color: var(--white);
 }
 .projects {
   margin: 4rem auto;
@@ -62,10 +73,19 @@
   }
 }
 
+@media (max-width: 20em) {
+  .heading {
+    font-size: var(--heading-s);
+  }
+}
+
 @media (min-width: 48em) {
+  .heading {
+    font-size: var(--heading-l);
+  }
   .projectWrapper {
     max-width: 740px;
-    margin-bottom: 10rem;
+    margin-bottom: 14rem;
   }
   .screenshots {
     flex-direction: row;

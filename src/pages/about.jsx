@@ -88,11 +88,13 @@ const About = () => {
                 damping: 60,
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              possimus dignissimos dolores vero ut accusamus quasi quisquam eos,
-              odio in mollitia voluptatum quas exercitationem. Et eligendi
-              deserunt quis voluptatibus culpa, id rem neque inventore
-              exercitationem deleniti? Expedita, eum. Facere aperiam voluptates
+              Hey there, welcome to my portfolio website! I&apos;m a front-end
+              developer based in the UK and I absolutely love building clean and
+              user-friendly web applications. With four years of experience
+              working for a software company in the financial services industry,
+              I was exposed to developer teams and their work, which sparked my
+              interest in coding. Since then, I&apos;ve been teaching myself the
+              ins and outs of web development and I&apos;ve never looked back.
             </motion.p>
             <motion.p
               className={styles.paragraph}
@@ -107,11 +109,28 @@ const About = () => {
                 damping: 60,
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              possimus dignissimos dolores vero ut accusamus quasi quisquam eos,
-              odio in mollitia voluptatum quas exercitationem. Et eligendi
-              deserunt quis voluptatibus culpa, id rem neque inventore
-              exercitationem deleniti? Expedita, eum. Facere aperiam voluptates
+              In each project, my focus is on creating seamless and intuitive
+              experiences that prioritise usability and performance. I believe
+              in writing clean and efficient code that is easy to maintain and
+              scale.
+            </motion.p>
+            <motion.p
+              className={styles.paragraph}
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                type: "spring",
+                stiffness: 160,
+                delay: 1,
+                mass: 1,
+                damping: 60,
+              }}
+            >
+              Right now, my go-to stack is TypeScript, Next.js with either
+              Styled Components or CSS Modules. But I&apos;m always up for
+              learning about the latest web technologies and trying out new
+              techniques to level up my skills and stay ahead of the game.
             </motion.p>
           </div>
         </div>

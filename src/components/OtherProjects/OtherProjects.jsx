@@ -27,9 +27,9 @@ const OtherProjects = () => {
     <section className={styles.wrapper}>
       <h2 className={styles.heading}>Other projects</h2>
       <span className={styles.subheading}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        voluptas deserunt iure accusamus doloremque maiores sapiente laudantium
-        voluptatum eius odio!
+        The following are some of my previous or experimental projects that may
+        contain less efficient code, but serve as a testament to how much I have
+        improved as a developer.
       </span>
       <motion.ul className={styles.projectsGrid}>
         {slicedArray.map((item) => (

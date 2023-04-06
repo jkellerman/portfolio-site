@@ -14,10 +14,9 @@ const DesktopScreenshot = ({ image }) => {
         whileInView="visible"
         transition={{
           type: "spring",
-          stiffness: 160,
-          delay: 0.1,
+          stiffness: 200,
           mass: 1,
-          damping: 60,
+          damping: 40,
         }}
         viewport={{ once: true, amount: "some" }}
       >
@@ -29,8 +28,8 @@ const DesktopScreenshot = ({ image }) => {
             className={styles.screenshotDesktop}
             width={3024}
             height={1940}
-            sizes="(max-width: 48em) 100vw,
-                  66vw"
+            sizes="(max-width: 48em) 80vw,
+                  70vw"
           />
         </div>
       </motion.div>

@@ -1,7 +1,15 @@
 import Image from "next/image";
 import styles from "../Spheres/Spheres.module.css";
 import img from "@/public/assets/sphere.webp";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+  easeIn,
+  clamp,
+  easeOut,
+} from "framer-motion";
 
 const variants = {
   hidden: {
@@ -21,6 +29,13 @@ const variants = {
 };
 
 const Spheres = ({ about }) => {
+  const { scrollY } = useScroll();
+  const y = useTransform(
+    scrollY,
+    [0, 100, 200, 300, 400],
+    [0, -10, -20, -30, -40]
+  );
+
   return (
     <>
       <motion.div
@@ -28,28 +43,32 @@ const Spheres = ({ about }) => {
         variants={variants}
         initial="hidden"
         animate="visible"
+        style={{ translateY: y }}
       ></motion.div>
       <motion.div
         className={about ? `${styles.sphereAbout}` : styles.sphere}
         variants={variants}
         initial="hidden"
         animate="visible"
+        style={{ translateY: y }}
       >
-        <Image src={img} alt="" sizes="5vw" />
+        <Image src={img} alt="" sizes="5vw" priority />
       </motion.div>
       <motion.div
         className={about ? `${styles.sphereAbout}` : styles.sphere}
         variants={variants}
         initial="hidden"
         animate="visible"
+        style={{ translateY: y }}
       >
-        <Image src={img} alt="" sizes="5vw" />
+        <Image src={img} alt="" sizes="5vw" priority />
       </motion.div>
       <motion.div
         className={about ? `${styles.sphereAbout}` : styles.sphere}
         variants={variants}
         initial="hidden"
         animate="visible"
+        style={{ translateY: y }}
       ></motion.div>
     </>
   );

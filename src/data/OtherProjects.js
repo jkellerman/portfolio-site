@@ -3,7 +3,7 @@ export const OtherProjectsLists = [
     id: 1,
     title: "Shrtly",
     outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
+      "A landing page that uses an API to generate shortened URLs and stores them in the browser for later use.",
     link: "https://shrtly-app.netlify.app",
     github: "https://github.com/jkellerman/shrtly",
     stack: [
@@ -14,35 +14,9 @@ export const OtherProjectsLists = [
   },
   {
     id: 2,
-    title: "Sneakers",
-    outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
-    link: "https://jkellerman.github.io/ecommerce-product-page-main",
-    github: "https://github.com/jkellerman/ecommerce-product-page-main",
-    stack: [
-      { id: 1, name: "HTML" },
-      { id: 2, name: "SCSS" },
-      { id: 3, name: "JavaScript" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Devfinder",
-    outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
-    link: "https://jkellerman.github.io/github-user-search-app",
-    github: "https://github.com/jkellerman/github-user-search-app",
-    stack: [
-      { id: 1, name: "JavaScript" },
-      { id: 2, name: "SCSS" },
-      { id: 3, name: "Github API" },
-    ],
-  },
-  {
-    id: 4,
     title: "Lets get quizzical",
     outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
+      "A multi-subject quiz app. Put your knowledge to the test and improve your understanding across a variety of topics.",
     link: "https://lets-get-quizzical.netlify.app",
     github: "https://github.com/jkellerman/lets-get-quizzical",
     stack: [
@@ -52,10 +26,36 @@ export const OtherProjectsLists = [
     ],
   },
   {
+    id: 3,
+    title: "Sneakers",
+    outline:
+      "An ecommerce product page with a carousel view and cart functionality.",
+    link: "https://jkellerman.github.io/ecommerce-product-page-main",
+    github: "https://github.com/jkellerman/ecommerce-product-page-main",
+    stack: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "SCSS" },
+      { id: 3, name: "JavaScript" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Devfinder",
+    outline:
+      "Explore GitHub profiles to gain insights into users' information and repository stats.",
+    link: "https://jkellerman.github.io/github-user-search-app",
+    github: "https://github.com/jkellerman/github-user-search-app",
+    stack: [
+      { id: 1, name: "JavaScript" },
+      { id: 2, name: "SCSS" },
+      { id: 3, name: "Github API" },
+    ],
+  },
+  {
     id: 5,
     title: "Crowdfund",
     outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
+      "A website for a crowdfunding product that tracks the progress of pledges made by visitors.",
     link: "https://jkellerman.github.io/crowdfunding-product-page-main",
     github: "https://github.com/jkellerman/crowdfunding-product-page-main",
     stack: [
@@ -67,8 +67,7 @@ export const OtherProjectsLists = [
   {
     id: 6,
     title: "Splitter",
-    outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
+    outline: "A tip calculator for when you're splitting the bill.",
     link: "https://jkellerman.github.io/tip-calculator-app-main",
     github: "https://github.com/jkellerman/tip-calculator-app-main",
     stack: [
@@ -81,7 +80,7 @@ export const OtherProjectsLists = [
     id: 7,
     title: "Interactive pricing component",
     outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus",
+      "A tiny app that has a custom range input slider and pricing toggle",
     link: "https://jkellerman.github.io/interactive-pricing-component/",
     github: "https://github.com/jkellerman/interactive-pricing-component",
     stack: [
@@ -94,7 +93,7 @@ export const OtherProjectsLists = [
     id: 8,
     title: "Chat app css illustration",
     outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
+      "A feature illustration for a chat app built from scratch with css",
     link: "https://jkellerman.github.io/chat-app-css-illustration-master/",
     github: "https://github.com/jkellerman/chat-app-css-illustration-master",
     stack: [
@@ -106,7 +105,7 @@ export const OtherProjectsLists = [
     id: 9,
     title: "Classic todo app",
     outline:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ifug ea delectus qui natus repellendus odio ut non excepturi",
+      "Todo app which includes theme toggle and drag & drop functionality.",
     link: "https://jkellerman.github.io/todo-app-main",
     github: "https://github.com/jkellerman/todo-app-main",
     stack: [

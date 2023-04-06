@@ -4,7 +4,7 @@
 }
 
 .backgroundWrapper {
-  width: 100vw;
+  width: 100%;
   height: 300px;
   overflow: hidden;
   position: absolute;
@@ -202,8 +202,7 @@
     flex-direction: row-reverse;
   }
 
-  .heading,
-  .headingTop {
+  .heading {
     font-size: var(--heading-m);
   }
 

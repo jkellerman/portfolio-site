@@ -42,16 +42,14 @@ const Hero = () => {
             Hi, I&apos;m Josh
           </motion.div>
           <motion.h1 className={styles.title} variants={containerVariants}>
-            Front end developer
+            I Bring Ideas to Life on the Web
           </motion.h1>
           <motion.p className={styles.paragraph} variants={containerVariants}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsa,
-            fuga, ea delectus qui natus, repellendus odio ut non excepturi
+            I&apos;m a front end develepor, passionate about creating beautiful
+            and functional web apps that enhance user experiences.
           </motion.p>
           <motion.a
             className={styles.button}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
             variants={containerVariants}
             href="mailto: joshkellerman9@gmail.com"
           >

@@ -48,7 +48,7 @@ const Project = () => {
 
           <div className={styles.projectDetailsContainer}>
             <h1 className={styles.headingTop}>{ProjectList[2].name}</h1>
-            <p className={styles.paragraph}>{ProjectList[2].overview}</p>
+            <p className={styles.paragraph}>{ProjectList[2].outline}</p>
             <div className={styles.tickerWrapper}>
               <div className={styles.tickerTrack}>
                 {ProjectList[2].stack.map((tech) => (
@@ -151,28 +151,20 @@ const Project = () => {
         </section>
         <section>
           <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Heading 1</h2>
-            <p className={styles.paragraph}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              accusamus excepturi qui quod consequuntur voluptates quisquam
-              molestias, reprehenderit cum aliquam? Ut, omnis minima asperiores
-              accusamus commodi doloremque nulla cumque perferendis accusantium
-              provident ea nemo. Quas quibusdam repellendus sed dolorum
-              aspernatur deserunt vel, fugit blanditiis dignissimos sint
-              molestias inventore itaque exercitationem!
-            </p>
+            <h2 className={styles.heading}>Project overview</h2>
+            <p className={styles.paragraph}>{ProjectList[2].overview}</p>
           </div>
           <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Heading 1</h2>
-            <p className={styles.paragraph}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              accusamus excepturi qui quod consequuntur voluptates quisquam
-              molestias, reprehenderit cum aliquam? Ut, omnis minima asperiores
-              accusamus commodi doloremque nulla cumque perferendis accusantium
-              provident ea nemo. Quas quibusdam repellendus sed dolorum
-              aspernatur deserunt vel, fugit blanditiis dignissimos sint
-              molestias inventore itaque exercitationem!
-            </p>
+            <h2 className={styles.heading}>The Solution</h2>
+            <p className={styles.paragraph}>{ProjectList[2].solution}</p>
+          </div>
+          <div className={styles.contentContainer}>
+            <h2 className={styles.heading}>Challenges</h2>
+            <p className={styles.paragraph}>{ProjectList[2].challenges}</p>
+          </div>
+          <div className={styles.contentContainer}>
+            <h2 className={styles.heading}>Lessons learned</h2>
+            <p className={styles.paragraph}>{ProjectList[2].lessons}</p>
           </div>
         </section>
         <nav className={styles.nav}>
