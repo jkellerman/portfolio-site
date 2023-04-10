@@ -32,8 +32,8 @@ const Spheres = ({ about }) => {
   const { scrollY } = useScroll();
   const y = useTransform(
     scrollY,
-    [0, 100, 200, 300, 400],
-    [0, -10, -20, -30, -40]
+    [0, 400, 800, 1200, 1600, 2000],
+    [0, -40, -80, -120, -160, -200]
   );
 
   return (

@@ -15,7 +15,7 @@ const MobileScreenshot = ({ image }) => {
         transition={{
           type: "spring",
           stiffness: 200,
-          delay: 0.1,
+          delay: 0.05,
           mass: 1,
           damping: 40,
         }}

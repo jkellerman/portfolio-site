@@ -55,7 +55,7 @@ const MenuButton = ({
   const unitWidth = (unitHeight * width) / height;
 
   return (
-    <button className={styles.navMenuButton}>
+    <button className={styles.navMenuButton} aria-label="Nav Menu">
       <motion.svg
         viewBox={`0 0 ${unitWidth} ${unitHeight}`}
         overflow="visible"

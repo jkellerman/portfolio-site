@@ -28,7 +28,7 @@ const DesktopScreenshot = ({ image }) => {
             className={styles.screenshotDesktop}
             width={3024}
             height={1940}
-            sizes="(max-width: 48em) 80vw,
+            sizes="(max-width: 48em) 100vw,
                   70vw"
           />
         </div>
