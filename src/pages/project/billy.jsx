@@ -6,6 +6,7 @@ import Image from "next/image";
 import img from "@/public/assets/billy-desktop.webp";
 import background from "@/public/assets/bg-3.webp";
 import Nav from "@src/components/Nav/Nav";
+import { shimmer, toBase64 } from "@src/utils/placeholder";
 
 const Project = () => {
   return (
@@ -29,26 +30,9 @@ const Project = () => {
       </div>
       <main className={styles.main}>
         <section className={styles.descriptionContainer}>
-          <div className={styles.screenshotWrapper}>
-            <div className={styles.menuBar}>
-              <div className={styles.menuBarButton}></div>
-              <div className={styles.menuBarButton}></div>
-              <div className={styles.menuBarButton}></div>
-            </div>
-
-            <Image
-              src={img}
-              alt="/billy web app"
-              className={styles.screenshot}
-              priority
-              sizes="(max-width: 48em) 85vw,
-              66vw"
-            />
-          </div>
-
           <div className={styles.projectDetailsContainer}>
             <h1 className={styles.headingTop}>{ProjectList[2].name}</h1>
-            <p className={styles.paragraph}>{ProjectList[2].outline}</p>
+            <p className={styles.outline}>{ProjectList[2].outline}</p>
             <div className={styles.tickerWrapper}>
               <div className={styles.tickerTrack}>
                 {ProjectList[2].stack.map((tech) => (
@@ -66,14 +50,14 @@ const Project = () => {
               </div>
             </div>
             <div className={styles.linksContainer}>
-              {ProjectList[2].link && (
+              <div className={styles.linkWrapper}>
                 <a
-                  href={ProjectList[2].link}
+                  href={ProjectList[2].github}
                   className={styles.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>View Live</span>
+                  <span>View Code</span>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,46 +90,7 @@ const Project = () => {
                     </g>
                   </svg>
                 </a>
-              )}
-              <a
-                href={ProjectList[2].github}
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>View Code</span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  className={styles.externalArrow}
-                  width={20}
-                  height={20}
-                >
-                  <g weight="bold">
-                    <line
-                      x1="64"
-                      y1="192"
-                      x2="192"
-                      y2="64"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></line>
-                    <polyline
-                      points="88 64 192 64 192 168"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></polyline>
-                  </g>
-                </svg>
-              </a>
+              </div>
             </div>
           </div>
         </section>
@@ -165,6 +110,27 @@ const Project = () => {
           <div className={styles.contentContainer}>
             <h2 className={styles.heading}>Lessons learned</h2>
             <p className={styles.paragraph}>{ProjectList[2].lessons}</p>
+          </div>
+          <div className={styles.screenshotContainer}>
+            <div className={styles.screenshotWrapper}>
+              <div className={styles.menuBar}>
+                <div className={styles.menuBarButton}></div>
+                <div className={styles.menuBarButton}></div>
+                <div className={styles.menuBarButton}></div>
+              </div>
+
+              <Image
+                src={img}
+                alt="planetviewer web app"
+                className={styles.screenshot}
+                sizes="(max-width: 48em) 85vw,
+              66vw"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  shimmer(240, 140)
+                )}`}
+              />
+            </div>
           </div>
         </section>
         <nav className={styles.nav}>

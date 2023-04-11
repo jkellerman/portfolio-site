@@ -30,29 +30,9 @@ const Project = () => {
       </div>
       <main className={styles.main}>
         <section className={styles.descriptionContainer}>
-          <div className={styles.screenshotWrapper}>
-            <div className={styles.menuBar}>
-              <div className={styles.menuBarButton}></div>
-              <div className={styles.menuBarButton}></div>
-              <div className={styles.menuBarButton}></div>
-            </div>
-
-            <Image
-              src={img}
-              alt="/reelgood web app"
-              className={styles.screenshot}
-              sizes="(max-width: 48em) 85vw,
-              66vw"
-              placeholder="blur"
-              blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                shimmer(240, 140)
-              )}`}
-            />
-          </div>
-
           <div className={styles.projectDetailsContainer}>
             <h1 className={styles.headingTop}>{ProjectList[0].name}</h1>
-            <p className={styles.paragraph}>{ProjectList[0].outline}</p>
+            <p className={styles.outline}>{ProjectList[0].outline}</p>
             <div className={styles.tickerWrapper}>
               <div className={styles.tickerTrack}>
                 {ProjectList[0].stack.map((tech) => (
@@ -162,6 +142,7 @@ const Project = () => {
             <h2 className={styles.heading}>Project overview</h2>
             <p className={styles.paragraph}>{ProjectList[0].overview}</p>
           </div>
+
           <div className={styles.contentContainer}>
             <h2 className={styles.heading}>The Solution</h2>
             <p className={styles.paragraph}>{ProjectList[0].solution[0]}</p>
@@ -176,6 +157,32 @@ const Project = () => {
             <h2 className={styles.heading}>Lessons learned</h2>
             <p className={styles.paragraph}>{ProjectList[0].lessons}</p>
           </div>
+          <a
+            className={styles.screenshotContainer}
+            href={ProjectList[0].link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.screenshotWrapper}>
+              <div className={styles.menuBar}>
+                <div className={styles.menuBarButton}></div>
+                <div className={styles.menuBarButton}></div>
+                <div className={styles.menuBarButton}></div>
+              </div>
+
+              <Image
+                src={img}
+                alt="reelgood web app"
+                className={styles.screenshot}
+                sizes="(max-width: 48em) 85vw,
+              66vw"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  shimmer(240, 140)
+                )}`}
+              />
+            </div>
+          </a>
         </section>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
