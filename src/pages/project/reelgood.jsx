@@ -6,6 +6,7 @@ import Image from "next/image";
 import img from "@/public/assets/reelgood-desktop.webp";
 import background from "@/public/assets/bg-1.webp";
 import Nav from "@src/components/Nav/Nav";
+import { shimmer, toBase64 } from "@src/utils/placeholder";
 
 const Project = () => {
   return (
@@ -40,9 +41,12 @@ const Project = () => {
               src={img}
               alt="/reelgood web app"
               className={styles.screenshot}
-              priority
               sizes="(max-width: 48em) 85vw,
               66vw"
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(240, 140)
+              )}`}
             />
           </div>
 
@@ -67,13 +71,56 @@ const Project = () => {
             </div>
             <div className={styles.linksContainer}>
               {ProjectList[0].link && (
+                <div className={styles.linkWrapper}>
+                  <a
+                    href={ProjectList[0].link}
+                    className={styles.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>View Live</span>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                      focusable="false"
+                      className={styles.externalArrow}
+                      width={20}
+                      height={20}
+                    >
+                      <g weight="bold">
+                        <line
+                          x1="64"
+                          y1="192"
+                          x2="192"
+                          y2="64"
+                          fill="none"
+                          stroke="#FFF"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="24"
+                        ></line>
+                        <polyline
+                          points="88 64 192 64 192 168"
+                          fill="none"
+                          stroke="#FFF"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="24"
+                        ></polyline>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              )}
+              <div className={styles.linkWrapper}>
                 <a
-                  href={ProjectList[0].link}
+                  href={ProjectList[0].github}
                   className={styles.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>View Live</span>
+                  <span>View Code</span>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,46 +153,7 @@ const Project = () => {
                     </g>
                   </svg>
                 </a>
-              )}
-              <a
-                href={ProjectList[0].github}
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>View Code</span>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  className={styles.externalArrow}
-                  width={20}
-                  height={20}
-                >
-                  <g weight="bold">
-                    <line
-                      x1="64"
-                      y1="192"
-                      x2="192"
-                      y2="64"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></line>
-                    <polyline
-                      points="88 64 192 64 192 168"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></polyline>
-                  </g>
-                </svg>
-              </a>
+              </div>
             </div>
           </div>
         </section>

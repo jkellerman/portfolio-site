@@ -9,6 +9,7 @@
   gap: 1.25rem;
   position: relative;
   z-index: 1;
+  background-color: var(--background-dark);
 }
 
 .contentWrapper {
@@ -21,12 +22,13 @@
 
 .heading {
   color: var(--white);
-  font-size: var(--heading-m);
+  font-size: var(--h2-m);
   margin: 0.25rem 0 0.5rem;
 }
 
 .paragraph {
   color: var(--gray);
+  font-weight: var(--fw-light);
   line-height: var(--line-height);
   margin-bottom: 1rem;
 }
@@ -62,7 +64,7 @@
     width: unset;
   }
   .heading {
-    font-size: var(--heading-l);
+    font-size: var(--h2-l);
   }
 
   .aboutContainer {
@@ -83,5 +85,9 @@
   .image {
     width: 375px;
     height: 435px;
+  }
+
+  .paragraph {
+    font-size: var(--body-l);
   }
 }

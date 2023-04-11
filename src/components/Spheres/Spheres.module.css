@@ -113,72 +113,38 @@
 
 @media (min-width: 48em) {
   .sphere:nth-child(1) {
-    top: 7rem;
+    top: 0rem;
   }
   .sphere:nth-child(2) {
-    top: 3.5rem;
+    top: -3rem;
+    right: -1rem;
   }
   .sphere:nth-child(3) {
     left: 0.5rem;
+    bottom: -1rem;
   }
   .sphere:nth-child(4) {
-    right: 0.5rem;
+    right: 0rem;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 75em) {
   .sphere:nth-child(1) {
     left: 1rem;
   }
   .sphere:nth-child(2) {
-    right: 3rem;
-    top: 8rem;
+    right: 7rem;
+    top: 2rem;
   }
   .sphere:nth-child(3) {
-    left: 6rem;
-    bottom: 15rem;
+    left: 8rem;
+    bottom: 10rem;
   }
   .sphere:nth-child(4) {
-    bottom: 14rem;
+    bottom: 5rem;
   }
   .sphereAbout:nth-child(1),
   .sphereAbout:nth-child(2) {
     display: block;
-  }
-}
-
-@media (min-width: 90em) {
-  .sphere:nth-child(1) {
-    left: 1rem;
-    top: 13rem;
-  }
-  .sphere:nth-child(2) {
-    right: 6rem;
-    top: 14rem;
-  }
-  .sphere:nth-child(3) {
-    left: 6rem;
-    bottom: 20rem;
-  }
-  .sphere:nth-child(4) {
-    bottom: 17.5rem;
-  }
-}
-
-@media (min-width: 108em) {
-  .sphere:nth-child(1) {
-    left: 1rem;
-    top: 13rem;
-  }
-  .sphere:nth-child(2) {
-    right: 6rem;
-    top: 14rem;
-  }
-  .sphere:nth-child(3) {
-    left: 6rem;
-    bottom: 20rem;
-  }
-  .sphere:nth-child(4) {
-    bottom: 17.5rem;
   }
 }

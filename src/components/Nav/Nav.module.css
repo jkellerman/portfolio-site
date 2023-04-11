@@ -86,10 +86,15 @@
 }
 
 .navListItem {
-  font-size: var(--heading-s);
+  font-size: var(--h3-s);
   margin-bottom: 0.5rem;
   letter-spacing: -1px;
   text-transform: capitalize;
+  font-weight: var(--fw-bold);
+}
+
+.navListItem:hover {
+  color: var(--primary-light);
 }
 
 .navMenuButton {
@@ -114,7 +119,7 @@
   }
 
   .navListItem {
-    font-size: var(--heading-xs);
+    font-size: 1rem;
     font-family: var(--ff-body);
     font-weight: var(--fw-light);
     margin-left: 2.5rem;

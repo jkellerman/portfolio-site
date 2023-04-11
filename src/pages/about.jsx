@@ -6,6 +6,7 @@ import Nav from "@src/components/Nav/Nav";
 import Spheres from "@src/components/Spheres/Spheres";
 import { motion } from "framer-motion";
 import { variants } from "@src/utils/framer";
+import { shimmer, toBase64 } from "@src/utils/placeholder";
 import img from "@/public/assets/josh.webp";
 
 const About = () => {
@@ -42,6 +43,10 @@ const About = () => {
               priority
               sizes="(max-width: 48em) 85vw,
               66vw"
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(240, 140)
+              )}`}
             />
           </motion.div>
           <div className={styles.contentWrapper}>

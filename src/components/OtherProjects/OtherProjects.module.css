@@ -14,6 +14,7 @@
 .subheading {
   text-align: center;
   font-size: var(--body-m);
+  font-weight: var(--fw-light);
   color: var(--gray);
   max-width: 80%;
   margin-bottom: 4rem;
@@ -72,6 +73,7 @@
 .title {
   margin-bottom: 0.5rem;
   position: static;
+  font-size: var(--h5);
 }
 
 .link::before {
@@ -86,6 +88,7 @@
 .outline {
   color: var(--gray);
   font-size: var(--body-s);
+  font-weight: var(--fw-light);
 }
 
 .stackWrapper {
@@ -98,6 +101,7 @@
   color: var(--gray);
   opacity: 0.8;
   font-size: var(--body-xs);
+  font-weight: var(--fw-light);
 }
 
 .button {

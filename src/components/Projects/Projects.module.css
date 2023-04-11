@@ -3,7 +3,7 @@
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 8rem;
-  font-size: var(--heading-m);
+  font-size: var(--h2-m);
   display: flex;
   gap: 0.5rem;
 }
@@ -49,11 +49,13 @@
 
 .title {
   color: var(--white);
-  font-size: var(--heading-s);
+  font-size: var(--h4-s);
   margin-bottom: 0.75rem;
 }
 
 .outline {
+  font-size: var(--body-m);
+  font-weight: var(--fw-light);
   color: var(--gray);
   margin-bottom: 1.75rem;
   line-height: var(--line-height);
@@ -75,13 +77,13 @@
 
 @media (max-width: 20em) {
   .heading {
-    font-size: var(--heading-s);
+    font-size: var(--h2-s);
   }
 }
 
 @media (min-width: 48em) {
   .heading {
-    font-size: var(--heading-l);
+    font-size: var(--h2-l);
   }
   .projectWrapper {
     max-width: 740px;
@@ -93,6 +95,10 @@
     gap: 1.5rem;
   }
 
+  .title {
+    font-size: var(--h4-m);
+  }
+
   .projects .projectWrapper:nth-of-type(2) .screenshots {
     flex-direction: row-reverse;
   }
@@ -101,5 +107,9 @@
 @media (min-width: 75em) {
   .projectWrapper {
     max-width: 800px;
+  }
+
+  .title {
+    font-size: var(--h4-l);
   }
 }

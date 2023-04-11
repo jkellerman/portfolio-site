@@ -4,14 +4,15 @@ import { ProjectList } from "@src/data/Projects";
 import DesktopScreenshot from "../DesktopScreenshot/DesktopScreenshot";
 import MobileScreenshot from "../MobileScreenshot/MobileScreenshot";
 import { motion } from "framer-motion";
+import { variants } from "@src/utils/framer";
 
 const Projects = () => {
   return (
     <section className={styles.projects}>
-      <h2 className={styles.heading}>
+      <h1 className={styles.heading}>
         <span className={styles.heading1}>Selected</span>
         <span className={styles.heading2}>Work</span>
-      </h2>
+      </h1>
       {ProjectList.map((item) => (
         <div key={item.id} className={styles.projectWrapper}>
           <div className={styles.screenshots}>
@@ -20,14 +21,14 @@ const Projects = () => {
           </div>
           <motion.div
             className={styles.projectDetailsWrapper}
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            variants={variants}
+            initial="hidden"
+            whileInView="visible"
             transition={{
               type: "spring",
               stiffness: 200,
               mass: 1,
               damping: 40,
-              delay: 0.5,
             }}
             viewport={{ once: true, amount: "some" }}
           >

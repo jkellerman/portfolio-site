@@ -1,15 +1,7 @@
 import Image from "next/image";
 import styles from "../Spheres/Spheres.module.css";
 import img from "@/public/assets/sphere.webp";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-  easeIn,
-  clamp,
-  easeOut,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const variants = {
   hidden: {

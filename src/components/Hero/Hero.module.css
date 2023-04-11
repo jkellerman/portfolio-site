@@ -2,15 +2,18 @@
   margin: 7.5rem auto 0;
   width: 85%;
   max-width: 1215px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .heroWrapper {
-  min-height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .wrapper {
@@ -46,16 +49,16 @@
 
 .title {
   margin-bottom: 1rem;
-  font-size: var(--heading-l);
+  font-size: var(--h1-s);
   text-align: center;
   letter-spacing: -1px;
-  max-width: 85%;
   color: var(--white);
 }
 
 .paragraph {
   text-align: center;
-  font-size: var(--body-l);
+  font-size: var(--body-m);
+  font-weight: var(--fw-light);
   color: var(--gray);
   max-width: 98%;
   margin-bottom: 5rem;
@@ -68,7 +71,7 @@
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 48px;
-  font-size: var(--body-l);
+  font-size: var(--body-m);
   cursor: pointer;
 }
 
@@ -81,21 +84,37 @@
 
 @media (max-width: 20em) {
   .title {
-    font-size: var(--heading-m);
+    font-size: var(--h1-s);
   }
 }
 @media (min-width: 48em) {
   .hero {
     margin-top: 0;
   }
+
+  .title {
+    font-size: var(--h1-m);
+    max-width: 85%;
+  }
+
+  .paragraph {
+    max-width: 55%;
+  }
 }
 
 @media (min-width: 64em) {
   .title {
-    font-size: var(--heading-xl);
-    max-width: 65%;
+    font-size: var(--h1-l);
+    max-width: 80%;
   }
+
   .paragraph {
-    max-width: 55%;
+    font-size: var(--body-l);
+  }
+}
+
+@media (min-width: 75em) {
+  .button {
+    font-size: var(--body-l);
   }
 }
