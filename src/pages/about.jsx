@@ -41,8 +41,8 @@ const About = () => {
               alt="Josh Kellerman"
               className={styles.image}
               priority
-              sizes="(max-width: 48em) 85vw,
-              66vw"
+              sizes="(max-width: 48em) 80vw,
+              33vw"
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
                 shimmer(240, 140)

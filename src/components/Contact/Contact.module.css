@@ -12,12 +12,14 @@
   display: inline-block;
 }
 
-.emailWrapper:hover .email,
-.emailWrapper:hover .contactArrow > g > line,
-.emailWrapper:hover .contactArrow > g > polyline {
-  stroke: var(--primary-light);
-  color: var(--primary-light);
-  transition: var(--transition);
+@media (hover: hover) {
+  .emailWrapper:hover .email,
+  .emailWrapper:hover .contactArrow > g > line,
+  .emailWrapper:hover .contactArrow > g > polyline {
+    stroke: var(--primary-light);
+    color: var(--primary-light);
+    transition: var(--transition);
+  }
 }
 
 .heading,

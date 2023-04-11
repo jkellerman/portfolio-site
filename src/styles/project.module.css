@@ -190,16 +190,18 @@
   transform: translateY(15%);
 }
 
-.navLink:hover .arrow {
-  fill: var(--primary-light);
-  color: var(--primary-light);
-  transition: var(--transition);
-}
+@media (hover: hover) {
+  .navLink:hover .arrow {
+    fill: var(--primary-light);
+    color: var(--primary-light);
+    transition: var(--transition);
+  }
 
-.link:hover > .externalArrow > g > line,
-.link:hover > .externalArrow > g > polyline {
-  stroke: var(--primary-light);
-  transition: var(--transition);
+  .link:hover > .externalArrow > g > line,
+  .link:hover > .externalArrow > g > polyline {
+    stroke: var(--primary-light);
+    transition: var(--transition);
+  }
 }
 
 @media (min-width: 48em) {

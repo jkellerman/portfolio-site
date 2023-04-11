@@ -93,8 +93,10 @@
   font-weight: var(--fw-bold);
 }
 
-.navListItem:hover {
-  color: var(--primary-light);
+@media (hover: hover) {
+  .navListItem:hover {
+    color: var(--primary-light);
+  }
 }
 
 .navMenuButton {

@@ -44,7 +44,7 @@ const Spheres = ({ about }) => {
         animate="visible"
         style={{ translateY: y }}
       >
-        <Image src={img} alt="" sizes="5vw" priority />
+        <Image src={img} alt="" sizes="5vw" />
       </motion.div>
       <motion.div
         className={about ? `${styles.sphereAbout}` : styles.sphere}
@@ -53,7 +53,7 @@ const Spheres = ({ about }) => {
         animate="visible"
         style={{ translateY: y }}
       >
-        <Image src={img} alt="" sizes="5vw" priority />
+        <Image src={img} alt="" sizes="5vw" />
       </motion.div>
       <motion.div
         className={about ? `${styles.sphereAbout}` : styles.sphere}

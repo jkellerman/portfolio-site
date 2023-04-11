@@ -68,9 +68,11 @@ a {
   color: var(--white);
 }
 
-a:hover {
-  transition: var(--transition);
-  color: var(--primary-light);
+@media (hover: hover) {
+  a:hover {
+    transition: var(--transition);
+    color: var(--primary-light);
+  }
 }
 
 .no-scroll {
