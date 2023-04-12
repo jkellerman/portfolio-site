@@ -1,5 +1,5 @@
 .aboutContainer {
-  width: 85%;
+  width: 87.5%;
   margin: 6rem auto 10.5rem;
   max-width: 1200px;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .contentWrapper {
-  width: 90%;
+  width: 87.5%;
 }
 
 .subheading {

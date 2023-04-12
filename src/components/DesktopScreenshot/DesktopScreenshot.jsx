@@ -29,8 +29,8 @@ const DesktopScreenshot = ({ image }) => {
             className={styles.screenshotDesktop}
             width={3024}
             height={1940}
-            sizes="(max-width: 48em) 85vw,
-                  70vw"
+            sizes="(max-width: 48em) 90vw,
+                  75vw"
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
               shimmer(240, 140)

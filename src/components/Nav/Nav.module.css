@@ -29,7 +29,7 @@
 }
 
 .navInnerWrapper {
-  min-width: 85%;
+  min-width: 87.5%;
   max-width: 1255px;
 }
 
@@ -71,7 +71,7 @@
 .navMenu {
   display: none;
   position: absolute;
-  top: 6rem;
+  top: 8rem;
   width: 100%;
 }
 
@@ -85,13 +85,8 @@
   padding: 0;
 }
 
-.navListItemWrapper {
-  margin-bottom: 0.75rem;
-}
-
 .navListItem {
-  font-size: var(--h4-s);
-
+  font-size: var(--h3-s);
   letter-spacing: -1px;
   text-transform: capitalize;
   font-weight: var(--fw-regular);
@@ -112,10 +107,6 @@
   .navMenuButton,
   .colorOverlay {
     display: none;
-  }
-
-  .navListItemWrapper {
-    margin-bottom: unset;
   }
 
   .navMenu {

@@ -23,7 +23,7 @@
 }
 
 .main {
-  width: 85%;
+  width: 87.5%;
   margin: 15rem auto 1rem;
   position: relative;
   max-width: 400px;
@@ -32,13 +32,13 @@
 .heading,
 .headingTop {
   color: var(--white);
-  text-transform: capitalize;
   margin-bottom: 1rem;
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
 }
 
 .headingTop {
   font-size: var(--h2-l);
+  text-transform: capitalize;
 }
 .heading {
   font-size: var(--h2-m s);
@@ -194,7 +194,7 @@
 }
 
 .navLink {
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-medium);
 }
 
 .arrow {

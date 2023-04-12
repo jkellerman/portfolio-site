@@ -142,7 +142,7 @@ const Project = () => {
           </div>
 
           <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>The Solution</h2>
+            <h2 className={styles.heading}>The solution</h2>
             <p className={styles.paragraph}>{ProjectList[0].solution[0]}</p>
             <p className={styles.paragraph}>{ProjectList[0].solution[1]}</p>
           </div>
@@ -172,7 +172,7 @@ const Project = () => {
                 src={img}
                 alt="reelgood web app"
                 className={styles.screenshot}
-                sizes="(max-width: 48em) 85vw,
+                sizes="(max-width: 48em) 90vw,
               66vw"
                 placeholder="blur"
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(
