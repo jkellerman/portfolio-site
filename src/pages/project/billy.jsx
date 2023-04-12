@@ -26,7 +26,6 @@ const Project = () => {
           sizes="100vw"
           className={styles.background}
           priority
-          placeholder="blur"
         />
       </div>
       <main className={styles.main}>
