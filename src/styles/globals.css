@@ -61,6 +61,7 @@ h3,
 h4,
 a {
   font-family: var(--ff-heading);
+  font-weight: var(--fw-regular);
 }
 
 a {

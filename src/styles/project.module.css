@@ -181,9 +181,13 @@
   justify-content: space-between;
 }
 
-.navLink {
+.navLinkWrapper {
   display: flex;
   gap: 1rem;
+}
+
+.navLinkWrapper:nth-child(1) {
+  flex-direction: row-reverse;
 }
 
 .arrow {
@@ -191,14 +195,14 @@
 }
 
 @media (hover: hover) {
-  .navLink:hover .arrow {
+  .navLink:hover ~ .arrow {
     fill: var(--primary-light);
     color: var(--primary-light);
     transition: var(--transition);
   }
 
-  .link:hover > .externalArrow > g > line,
-  .link:hover > .externalArrow > g > polyline {
+  .link:hover ~ .externalArrow > g > line,
+  .link:hover ~ .externalArrow > g > polyline {
     stroke: var(--primary-light);
     transition: var(--transition);
   }

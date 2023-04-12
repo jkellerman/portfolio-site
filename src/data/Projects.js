@@ -43,8 +43,8 @@ export const ProjectList = [
     link: "https://www.planetviewer.net/",
     github: "https://github.com/jkellerman/Planet-viewer",
     stack: [
-      { id: 2, name: "Next.js" },
-      { id: 1, name: "TypeScript" },
+      { id: 1, name: "React" },
+      { id: 2, name: "TypeScript" },
       { id: 3, name: "Styled-Components" },
       { id: 4, name: "Framer Motion" },
       { id: 5, name: "Model-viewer" },
@@ -69,9 +69,9 @@ export const ProjectList = [
       "An invoice management app for freelancers to help stay organised and keep track of payments.",
     github: "https://github.com/franmsilva/billy",
     stack: [
-      { id: 3, name: "Next.js" },
+      { id: 1, name: "Next.js" },
       { id: 2, name: "TypeScript" },
-      { id: 1, name: "Styled-Components" },
+      { id: 3, name: "Styled-Components" },
       { id: 4, name: "DynamoDB" },
       { id: 5, name: "Jest" },
       { id: 6, name: "React Testing Library" },
