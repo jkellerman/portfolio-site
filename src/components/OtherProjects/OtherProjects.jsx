@@ -4,7 +4,7 @@ import Image from "next/image";
 import folder from "@/public/assets/folder-solid.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { containerVariants, variants } from "@src/utils/framer";
+import { containerVariants, variants } from "@src/utils/animations";
 
 const OtherProjects = () => {
   const [numToShow, setNumToShow] = useState(3);

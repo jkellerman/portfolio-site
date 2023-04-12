@@ -5,7 +5,7 @@ import Image from "next/image";
 import Nav from "@src/components/Nav/Nav";
 import Spheres from "@src/components/Spheres/Spheres";
 import { motion } from "framer-motion";
-import { variants } from "@src/utils/framer";
+import { variants } from "@src/utils/animations";
 import { shimmer, toBase64 } from "@src/utils/placeholder";
 import img from "@/public/assets/josh.webp";
 

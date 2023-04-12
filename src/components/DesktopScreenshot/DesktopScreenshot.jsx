@@ -2,7 +2,7 @@ import styles from "../DesktopScreenshot/DesktopScreenshot.module.css";
 import Image from "next/image";
 import MenuBar from "../MenuBar/MenuBar";
 import { motion } from "framer-motion";
-import { variants } from "@src/utils/framer";
+import { variants } from "@src/utils/animations";
 import { shimmer, toBase64 } from "@src/utils/placeholder";
 
 const DesktopScreenshot = ({ image }) => {
@@ -29,7 +29,7 @@ const DesktopScreenshot = ({ image }) => {
             className={styles.screenshotDesktop}
             width={3024}
             height={1940}
-            sizes="(max-width: 48em) 90vw,
+            sizes="(max-width: 48em) 87.5vw,
                   75vw"
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(

@@ -1,6 +1,6 @@
 import styles from "../Button/Button.module.css";
 import { motion } from "framer-motion";
-import { variants } from "@src/utils/framer";
+import { variants } from "@src/utils/animations";
 
 const Button = ({ children, handleClick }) => {
   return (

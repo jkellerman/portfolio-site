@@ -26,6 +26,7 @@ const Project = () => {
           sizes="100vw"
           className={styles.background}
           priority
+          placeholder="blur"
         />
       </div>
       <main className={styles.main}>
@@ -122,7 +123,7 @@ const Project = () => {
                 src={img}
                 alt="planetviewer web app"
                 className={styles.screenshot}
-                sizes="(max-width: 48em) 85vw,
+                sizes="(max-width: 48em) 87.5vw,
               66vw"
                 placeholder="blur"
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(

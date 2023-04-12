@@ -38,6 +38,7 @@
   object-fit: contain;
   border-radius: inherit;
   transform: translate(-1%, 2%);
+  background-color: transparent;
 }
 
 .name {

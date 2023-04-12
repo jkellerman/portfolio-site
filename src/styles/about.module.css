@@ -25,6 +25,7 @@
   font-size: var(--h2-m);
   font-weight: var(--fw-medium);
   margin: 0.25rem 0 0.5rem;
+  line-height: 3.5rem;
 }
 
 .paragraph {

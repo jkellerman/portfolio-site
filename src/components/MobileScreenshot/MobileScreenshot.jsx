@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../MobileScreenshot/MobileScreenshot.module.css";
 import { motion } from "framer-motion";
-import { variants } from "@src/utils/framer";
+import { variants } from "@src/utils/animations";
 
 const MobileScreenshot = ({ image }) => {
   return (

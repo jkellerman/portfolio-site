@@ -1,6 +1,6 @@
 import styles from "../Contact/Contact.module.css";
 import { motion } from "framer-motion";
-import { containerVariants } from "@src/utils/framer";
+import { containerVariants } from "@src/utils/animations";
 
 const Contact = () => {
   return (
@@ -14,9 +14,9 @@ const Contact = () => {
       <motion.span className={styles.subheading} variants={containerVariants}>
         Lets collab
       </motion.span>
-      <motion.h2 className={styles.heading} variants={containerVariants}>
+      <motion.h1 className={styles.heading} variants={containerVariants}>
         Got a project? Lets talk
-      </motion.h2>
+      </motion.h1>
       <motion.div className={styles.emailWrapper} variants={containerVariants}>
         <a href="mailto: joshkellerman9@gmail.com" className={styles.email}>
           <span>Email me</span>

@@ -4,7 +4,7 @@ import { ProjectList } from "@src/data/Projects";
 import DesktopScreenshot from "../DesktopScreenshot/DesktopScreenshot";
 import MobileScreenshot from "../MobileScreenshot/MobileScreenshot";
 import { motion } from "framer-motion";
-import { variants } from "@src/utils/framer";
+import { variants } from "@src/utils/animations";
 
 const Projects = () => {
   return (
@@ -32,7 +32,7 @@ const Projects = () => {
             }}
             viewport={{ once: true, amount: "some" }}
           >
-            <h3 className={styles.title}>{item.title}</h3>
+            <h2 className={styles.title}>{item.title}</h2>
             <p className={styles.outline}>{item.outline}</p>
             <div className={styles.projectLinkWrapper}>
               <Link

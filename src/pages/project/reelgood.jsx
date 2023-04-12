@@ -26,6 +26,7 @@ const Project = () => {
           sizes="100vw"
           className={styles.background}
           priority
+          placeholder="blur"
         />
       </div>
       <main className={styles.main}>
@@ -172,7 +173,7 @@ const Project = () => {
                 src={img}
                 alt="reelgood web app"
                 className={styles.screenshot}
-                sizes="(max-width: 48em) 90vw,
+                sizes="(max-width: 48em) 87.5vw,
               66vw"
                 placeholder="blur"
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(

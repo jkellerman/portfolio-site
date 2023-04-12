@@ -1,7 +1,7 @@
 import styles from "../Hero/Hero.module.css";
 import Spheres from "../Spheres/Spheres";
 import { motion } from "framer-motion";
-import { containerVariants } from "@src/utils/framer";
+import { containerVariants } from "@src/utils/animations";
 import Image from "next/image";
 import img from "@/public/assets/icon.png";
 
@@ -28,8 +28,10 @@ const Hero = () => {
             src={img}
             alt="josh kellerman"
             priority
-            sizes="30vw"
+            sizes="(max-width: 48em) 33vw,
+            10vw"
             className={styles.image}
+            placeholder="blur"
           />
         </motion.div>
         <motion.div
