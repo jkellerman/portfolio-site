@@ -48,7 +48,7 @@ const Nav = () => {
               }
             >
               <ul className={styles.navMenuList}>
-                <li>
+                <li className={styles.navListItemWrapper}>
                   <Link
                     href="/about"
                     className={styles.navListItem}
@@ -57,7 +57,7 @@ const Nav = () => {
                     about
                   </Link>
                 </li>
-                <li>
+                <li className={styles.navListItemWrapper}>
                   <a
                     href="mailto: joshkellerman9@gmail.com"
                     className={styles.navListItem}

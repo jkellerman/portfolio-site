@@ -8,6 +8,7 @@
 
 .heading {
   color: var(--primary-light);
+  font-weight: var(--fw-regular);
   margin-bottom: 1.5rem;
 }
 
@@ -74,6 +75,7 @@
   margin-bottom: 0.5rem;
   position: static;
   font-size: var(--h5);
+  font-weight: var(--fw-regular);
 }
 
 .link::before {

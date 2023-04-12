@@ -50,9 +50,11 @@
 .title {
   margin-bottom: 1rem;
   font-size: var(--h1-s);
+  font-weight: var(--fw-medium);
   text-align: center;
   letter-spacing: -1px;
   color: var(--white);
+  line-height: 5rem;
 }
 
 .paragraph {

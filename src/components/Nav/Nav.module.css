@@ -85,12 +85,16 @@
   padding: 0;
 }
 
+.navListItemWrapper {
+  margin-bottom: 0.75rem;
+}
+
 .navListItem {
   font-size: var(--h4-s);
-  margin-bottom: 0.5rem;
+
   letter-spacing: -1px;
   text-transform: capitalize;
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-regular);
 }
 
 @media (hover: hover) {
@@ -108,6 +112,10 @@
   .navMenuButton,
   .colorOverlay {
     display: none;
+  }
+
+  .navListItemWrapper {
+    margin-bottom: unset;
   }
 
   .navMenu {

@@ -34,6 +34,7 @@
   color: var(--white);
   text-transform: capitalize;
   margin-bottom: 1rem;
+  font-weight: var(--fw-medium);
 }
 
 .headingTop {
@@ -174,6 +175,8 @@
 .nav {
   margin: 2rem 0;
   font-size: var(--h3-s);
+  letter-spacing: -2px;
+  font-weight: var(--fw-medium);
 }
 
 .navList {
@@ -188,6 +191,10 @@
 
 .navLinkWrapper:nth-child(1) {
   flex-direction: row-reverse;
+}
+
+.navLink {
+  font-weight: var(--fw-regular);
 }
 
 .arrow {

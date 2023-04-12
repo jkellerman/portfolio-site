@@ -12,11 +12,11 @@ const Contact = () => {
       viewport={{ once: true, amount: "some" }}
     >
       <motion.span className={styles.subheading} variants={containerVariants}>
-        Let&apos;s collab
+        Lets collab
       </motion.span>
-      <motion.h1 className={styles.heading} variants={containerVariants}>
-        Got a project? Let&apos;s talk
-      </motion.h1>
+      <motion.h2 className={styles.heading} variants={containerVariants}>
+        Got a project? Lets talk
+      </motion.h2>
       <motion.div className={styles.emailWrapper} variants={containerVariants}>
         <a href="mailto: joshkellerman9@gmail.com" className={styles.email}>
           <span>Email me</span>
