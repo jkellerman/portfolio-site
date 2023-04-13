@@ -15,11 +15,10 @@ const Footer = () => {
           href="https://github.com/jkellerman"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.iconWrapper}
         >
           <svg
-            height="25"
             viewBox="0 0 176 176"
-            width="25"
             xmlns="http://www.w3.org/2000/svg"
             fill="#fff"
             className={styles.icon}
@@ -39,12 +38,11 @@ const Footer = () => {
           href="https://www.linkedin.com/in/joshkellerman/"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.iconWrapper}
         >
           {" "}
           <svg
-            height="25"
             viewBox="0 0 176 176"
-            width="25"
             xmlns="http://www.w3.org/2000/svg"
             fill="#FFF"
             className={styles.icon}
