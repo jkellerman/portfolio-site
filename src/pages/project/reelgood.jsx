@@ -6,7 +6,6 @@ import Image from "next/image";
 import img from "@/public/assets/reelgood-desktop.webp";
 import background from "@/public/assets/bg-1.webp";
 import Nav from "@src/components/Nav/Nav";
-import { shimmer, toBase64 } from "@src/utils/placeholder";
 
 const Project = () => {
   return (
@@ -155,13 +154,13 @@ const Project = () => {
             <h2 className={styles.heading}>Lessons learned</h2>
             <p className={styles.paragraph}>{ProjectList[0].lessons}</p>
           </div>
-          <a
-            className={styles.screenshotContainer}
-            href={ProjectList[0].link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className={styles.screenshotWrapper}>
+          <div className={styles.screenshotContainer}>
+            <a
+              className={styles.screenshotWrapper}
+              href={ProjectList[0].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className={styles.menuBar}>
                 <div className={styles.menuBarButton}></div>
                 <div className={styles.menuBarButton}></div>
@@ -174,13 +173,9 @@ const Project = () => {
                 className={styles.screenshot}
                 sizes="(max-width: 48em) 87.5vw,
               66vw"
-                placeholder="blur"
-                blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                  shimmer(240, 140)
-                )}`}
               />
-            </div>
-          </a>
+            </a>
+          </div>
         </section>
         <nav className={styles.nav}>
           <ul className={styles.navList}>

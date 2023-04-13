@@ -6,7 +6,6 @@ import Image from "next/image";
 import img from "@/public/assets/billy-desktop.webp";
 import background from "@/public/assets/bg-3.webp";
 import Nav from "@src/components/Nav/Nav";
-import { shimmer, toBase64 } from "@src/utils/placeholder";
 
 const Project = () => {
   return (
@@ -124,10 +123,6 @@ const Project = () => {
                 className={styles.screenshot}
                 sizes="(max-width: 48em) 87.5vw,
               66vw"
-                placeholder="blur"
-                blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                  shimmer(240, 140)
-                )}`}
               />
             </div>
           </div>

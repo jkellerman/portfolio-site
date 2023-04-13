@@ -41,7 +41,7 @@
   text-transform: capitalize;
 }
 .heading {
-  font-size: var(--h2-m s);
+  font-size: var(--h2-m);
 }
 
 .menuBar {
@@ -212,6 +212,15 @@
   .link:hover ~ .externalArrow > g > polyline {
     stroke: var(--primary-light);
     transition: var(--transition);
+  }
+}
+
+@media (max-width: 20em) {
+  .headingTop {
+    font-size: var(--h2-s);
+  }
+  .heading {
+    font-size: var(--h3-l);
   }
 }
 

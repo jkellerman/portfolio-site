@@ -31,7 +31,6 @@ const Hero = () => {
             sizes="(max-width: 48em) 33vw,
             10vw"
             className={styles.image}
-            placeholder="blur"
           />
         </motion.div>
         <motion.div
