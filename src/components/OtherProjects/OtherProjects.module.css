@@ -6,6 +6,12 @@
   margin: 0 auto 14.5rem;
 }
 
+.headingWrapper {
+  text-align: center;
+  max-width: 80%;
+  margin-bottom: 4rem;
+}
+
 .heading {
   color: var(--primary-light);
   font-weight: var(--fw-regular);
@@ -17,8 +23,6 @@
   font-size: var(--body-m);
   font-weight: var(--fw-light);
   color: var(--gray);
-  max-width: 80%;
-  margin-bottom: 4rem;
   line-height: var(--line-height);
 }
 
@@ -123,13 +127,13 @@
 }
 
 @media (min-width: 48em) {
-  .subheading {
+  .headingWrapper {
     max-width: 60%;
   }
 }
 
 @media (min-width: 90em) {
-  .subheading {
+  .headingWrapper {
     max-width: 40%;
   }
 }

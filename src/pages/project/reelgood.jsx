@@ -4,7 +4,7 @@ import { ProjectList } from "@src/data/Projects";
 import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/assets/reelgood-desktop.webp";
-import background from "@/public/assets/bg-1.webp";
+import background from "@/public/assets/bg-1.jpg";
 import Nav from "@src/components/Nav/Nav";
 
 const Project = () => {
