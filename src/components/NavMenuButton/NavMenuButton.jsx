@@ -59,7 +59,6 @@ const MenuButton = ({
       <motion.svg
         viewBox={`0 0 ${unitWidth} ${unitHeight}`}
         overflow="visible"
-        preserveAspectRatio="none"
         width={width}
         height={height}
         {...props}

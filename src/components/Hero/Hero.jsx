@@ -43,11 +43,12 @@ const Hero = () => {
             Hi, I&apos;m Josh
           </motion.div>
           <motion.h1 className={styles.title} variants={containerVariants}>
-            I Bring Ideas to Life on the Web
+            Bringing Ideas to life on the Web.
           </motion.h1>
           <motion.p className={styles.paragraph} variants={containerVariants}>
-            I&apos;m a front end developer, passionate about creating beautiful
-            and functional web apps that enhance user experiences.
+            I&apos;m a front end developer, based in the UK, passionate about
+            creating beautiful and functional web apps that enhance user
+            experiences.
           </motion.p>
           <motion.a
             className={styles.button}

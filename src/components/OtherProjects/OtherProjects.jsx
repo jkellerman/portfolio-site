@@ -2,27 +2,10 @@ import styles from "../OtherProjects/OtherProjects.module.css";
 import { OtherProjectsLists } from "@src/data/OtherProjects";
 import Image from "next/image";
 import folder from "@/public/assets/folder-solid.svg";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { containerVariants, variants } from "@src/utils/animations";
 
 const OtherProjects = () => {
-  const [numToShow, setNumToShow] = useState(3);
-
-  const slicedArray = OtherProjectsLists.slice(0, numToShow);
-
-  const handleClick = () => {
-    if (numToShow === 3) {
-      setNumToShow(6);
-    }
-    if (numToShow === 6) {
-      setNumToShow(9);
-    }
-
-    if (numToShow === 9) {
-      setNumToShow(3);
-    }
-  };
   return (
     <section className={styles.wrapper}>
       <motion.div
@@ -45,20 +28,18 @@ const OtherProjects = () => {
           as a developer.
         </span>
       </motion.div>
-      <motion.ul className={styles.projectsGrid}>
-        {slicedArray.map((item) => (
+      <motion.ul
+        className={styles.projectsGrid}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: "some" }}
+      >
+        {OtherProjectsLists.map((item) => (
           <motion.li
             key={item.id}
             className={styles.project}
-            initial={{ opacity: 0, y: 75 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 200,
-              mass: 1,
-              damping: 40,
-            }}
-            viewport={{ once: true, amount: "some" }}
+            variants={containerVariants}
           >
             <header>
               <div className={styles.projectTop}>
@@ -131,15 +112,6 @@ const OtherProjects = () => {
           </motion.li>
         ))}
       </motion.ul>
-      <motion.button
-        className={styles.button}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        variants={containerVariants}
-        onClick={handleClick}
-      >
-        {numToShow === 9 ? "Show less" : "Show more"}
-      </motion.button>
     </section>
   );
 };
