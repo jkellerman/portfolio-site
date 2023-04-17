@@ -1,0 +1,24 @@
+.heading {
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-weight: var(--fw-regular);
+}
+.heading {
+  font-size: var(--h2-m);
+}
+
+.contentContainer {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 20em) {
+  .heading {
+    font-size: var(--h3-l);
+  }
+}
+
+@media (min-width: 75em) {
+  .heading {
+    font-size: var(--h2-l);
+  }
+}

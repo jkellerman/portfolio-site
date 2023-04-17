@@ -1,11 +1,13 @@
 import Head from "next/head";
 import styles from "@styles/project.module.css";
 import { ProjectList } from "@src/data/Projects";
-import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/assets/billy-desktop.webp";
 import background from "@/public/assets/bg-3.webp";
 import Nav from "@src/components/Nav/Nav";
+import ProjectDetails from "@src/components/ProjectDetails/ProjectDetails";
+import ProjectContent from "@src/components/ProjectContent/ProjectContent";
+import PageNav from "@src/components/PageNav/PageNav";
 
 const Project = () => {
   return (
@@ -28,87 +30,61 @@ const Project = () => {
         />
       </div>
       <main className={styles.main}>
-        <section className={styles.descriptionContainer}>
-          <div className={styles.projectDetailsContainer}>
-            <h1 className={styles.headingTop}>{ProjectList[2].name}</h1>
-            <p className={styles.outline}>{ProjectList[2].outline}</p>
-            <div className={styles.tickerWrapper}>
-              <div className={styles.tickerTrack}>
-                {ProjectList[2].stack.map((tech) => (
-                  <span key={tech.id} className={styles.tickerItem}>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-              <div className={styles.tickerTrack}>
-                {ProjectList[2].stack.map((tech) => (
-                  <span key={tech.id} className={styles.tickerItem}>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className={styles.linksContainer}>
-              <div className={styles.linkWrapper}>
-                <a
-                  href={ProjectList[2].github}
-                  className={styles.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Code
-                </a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  className={styles.externalArrow}
-                  width={20}
-                  height={20}
-                >
-                  <g weight="bold">
-                    <line
-                      x1="64"
-                      y1="192"
-                      x2="192"
-                      y2="64"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></line>
-                    <polyline
-                      points="88 64 192 64 192 168"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></polyline>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Project overview</h2>
-            <p className={styles.paragraph}>{ProjectList[2].overview}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>The Solution</h2>
-            <p className={styles.paragraph}>{ProjectList[2].solution}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Challenges</h2>
-            <p className={styles.paragraph}>{ProjectList[2].challenges}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Lessons learned</h2>
-            <p className={styles.paragraph}>{ProjectList[2].lessons}</p>
-          </div>
+        <div className={styles.descriptionContainer}>
+          <ProjectDetails project={2} />
+        </div>
+        <div>
+          <ProjectContent heading="Project overview">
+            <p className={styles.paragraph}>
+              As a collaborative effort with a software engineer, my primary
+              responsibilities for this project included building reusable
+              components, resolving issues in the existing codebase, integrating
+              <span className={styles.highlighted}> login authentication</span>,
+              and writing{" "}
+              <span className={styles.highlighted}>
+                unit and integration tests{" "}
+              </span>
+              .
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="The solution">
+            <p className={styles.paragraph}>
+              The project was built using DynamoDB, a NoSQL database service,
+              which provided a reliable and secure data storage solution for the
+              backend, and TypeScript, Next.js, and Styled-components for the
+              frontend. As part of the development process, I utilised Storybook
+              to create and test UI components in isolation. To implement the
+              login authentication, I opted for Firebase due to its simple setup
+              process and customisable login form options. Additionally, I set
+              up unit and integration tests using Jest and React Testing library
+              to ensure reliability and functionality across the app
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="Challenges">
+            <p className={styles.paragraph}>
+              As this was my first collaborative project, one of the obstacles I
+              faced was getting acquainted with the existing codebase.
+              Additionally, I had to familiarise myself with new technologies
+              while adhering to coding standards and design systems, which was a
+              challenging task. Despite the challenges, the project helped me
+              develop skills in project management, communication, and
+              problem-solving.
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="Lessons learned">
+            <p className={styles.paragraph}>
+              Collaborating with a more experienced software engineer was
+              invaluable to me. I gained knowledge of best practices for
+              collaborating on app development, and I have since applied this
+              knowledge to my own projects. However, the most significant
+              takeaway for me was learning how to use Git in a{" "}
+              <span className={styles.highlighted}>pair programming </span>
+              scenario. While I was already familiar with Git, I learned best
+              practices for making commits, managing conflicts, and
+              participating in{" "}
+              <span className={styles.highlighted}>code reviews</span>.
+            </p>
+          </ProjectContent>
           <div className={styles.screenshotContainer}>
             <div className={styles.screenshotWrapper}>
               <div className={styles.menuBar}>
@@ -126,45 +102,8 @@ const Project = () => {
               />
             </div>
           </div>
-        </section>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            <li className={styles.navLinkWrapper}>
-              <Link href="/project/planetviewer" className={styles.navLink}>
-                {" "}
-                Back
-              </Link>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width={35}
-                height={35}
-                fill="#FFF"
-                className={styles.arrow}
-              >
-                {" "}
-                {/*<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->*/}
-                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-              </svg>
-            </li>
-            <li className={styles.navLinkWrapper}>
-              <Link href="/project/reelgood" className={styles.navLink}>
-                Next
-              </Link>{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width={35}
-                height={35}
-                fill="#FFF"
-                className={styles.arrow}
-              >
-                {/*<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->*/}
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-              </svg>
-            </li>
-          </ul>
-        </nav>
+        </div>
+        <PageNav back="planetviewer" next="reelgood" />
       </main>
     </>
   );

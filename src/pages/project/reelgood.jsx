@@ -1,11 +1,13 @@
 import Head from "next/head";
 import styles from "@styles/project.module.css";
 import { ProjectList } from "@src/data/Projects";
-import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/assets/reelgood-desktop.webp";
 import background from "@/public/assets/bg-1.jpg";
 import Nav from "@src/components/Nav/Nav";
+import ProjectDetails from "@src/components/ProjectDetails/ProjectDetails";
+import ProjectContent from "@src/components/ProjectContent/ProjectContent";
+import PageNav from "@src/components/PageNav/PageNav";
 
 const Project = () => {
   return (
@@ -28,132 +30,68 @@ const Project = () => {
         />
       </div>
       <main className={styles.main}>
-        <section className={styles.descriptionContainer}>
-          <div className={styles.projectDetailsContainer}>
-            <h1 className={styles.headingTop}>{ProjectList[0].name}</h1>
-            <p className={styles.outline}>{ProjectList[0].outline}</p>
-            <div className={styles.tickerWrapper}>
-              <div className={styles.tickerTrack}>
-                {ProjectList[0].stack.map((tech) => (
-                  <span key={tech.id} className={styles.tickerItem}>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-              <div className={styles.tickerTrack}>
-                {ProjectList[0].stack.map((tech) => (
-                  <span key={tech.id} className={styles.tickerItem}>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className={styles.linksContainer}>
-              {ProjectList[0].link && (
-                <div className={styles.linkWrapper}>
-                  <a
-                    href={ProjectList[0].link}
-                    className={styles.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Live
-                  </a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 256 256"
-                    focusable="false"
-                    className={styles.externalArrow}
-                    width={20}
-                    height={20}
-                  >
-                    <g weight="bold">
-                      <line
-                        x1="64"
-                        y1="192"
-                        x2="192"
-                        y2="64"
-                        fill="none"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="24"
-                      ></line>
-                      <polyline
-                        points="88 64 192 64 192 168"
-                        fill="none"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="24"
-                      ></polyline>
-                    </g>
-                  </svg>
-                </div>
-              )}
-              <div className={styles.linkWrapper}>
-                <a
-                  href={ProjectList[0].github}
-                  className={styles.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Code
-                </a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  className={styles.externalArrow}
-                  width={20}
-                  height={20}
-                >
-                  <g weight="bold">
-                    <line
-                      x1="64"
-                      y1="192"
-                      x2="192"
-                      y2="64"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></line>
-                    <polyline
-                      points="88 64 192 64 192 168"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></polyline>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Project overview</h2>
-            <p className={styles.paragraph}>{ProjectList[0].overview}</p>
-          </div>
-
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>The solution</h2>
-            <p className={styles.paragraph}>{ProjectList[0].solution[0]}</p>
-            <p className={styles.paragraph}>{ProjectList[0].solution[1]}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Challenges</h2>
-            <p className={styles.paragraph}>{ProjectList[0].challenges[0]}</p>
-            <p className={styles.paragraph}>{ProjectList[0].challenges[1]}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Lessons learned</h2>
-            <p className={styles.paragraph}>{ProjectList[0].lessons}</p>
-          </div>
+        <div className={styles.descriptionContainer}>
+          <ProjectDetails project={0} />
+        </div>
+        <div>
+          <ProjectContent heading="Project overview">
+            <p className={styles.paragraph}>
+              I built Reelgood from the ground up whilst making design decisions
+              along the way with user experience and performance in mind. I am
+              continously improving the app as I pick up new skills and
+              technologies.
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="The solution">
+            <p className={styles.paragraph}>
+              Next.js was the logical choice for this web app, offering the
+              ability to set up dynamic page and API routes with ease, along
+              with various rendering options that can lead to improved
+              performance. The app uses{" "}
+              <span className={styles.highlighted}>server-side rendering</span>{" "}
+              with{" "}
+              <span className={styles.highlighted}>
+                stale-while-revalidate cache-control headers
+              </span>{" "}
+              to ensure the data for what is trending is always fresh while
+              improving app performance by reducing network requests.
+            </p>
+            <p className={styles.paragraph}>
+              React Query was used for the interior genre and search pages,
+              which involve{" "}
+              <span className={styles.highlighted}>infinite scrolling</span> ,
+              to reduce the amount of code needed for fetching data and
+              improving performance by handling data caching and background
+              refetching.
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="Challenges">
+            <p className={styles.paragraph}>
+              One of the main challenges I encountered was{" "}
+              <span className={styles.highlighted}>image optimisation </span>
+              due to the large volume of images in the application. Using the
+              Next/Image component or a custom loader would have incurred some
+              costs, therefore, I opted out of the offered by Vercel which would
+              have generated images in next-gen format, resized them for
+              different screen sizes, and prevented cumulative layout shifts.
+            </p>
+            <p className={styles.paragraph}>
+              However, I implemented best practices where possible, such as lazy
+              loading and fetching images from the TMDB API at appropriate
+              sizes.
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="Lessons learned">
+            <p className={styles.paragraph}>
+              This is the largest application I&apos;ve built from scratch which
+              provided valuable lessons in code structure and organisation.
+              Initially, my code was not clean, and instead of refactoring, I
+              completed tasks and moved on to the next. I have since made a
+              point of refactoring my code for better readability and
+              organisation. I also implemented the atomic design system to
+              improve directory organisation and consistency.
+            </p>
+          </ProjectContent>
           <div className={styles.screenshotContainer}>
             <a
               className={styles.screenshotWrapper}
@@ -176,45 +114,8 @@ const Project = () => {
               />
             </a>
           </div>
-        </section>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            <li className={styles.navLinkWrapper}>
-              <Link href="/project/billy" className={styles.navLink}>
-                {" "}
-                Back
-              </Link>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width={35}
-                height={35}
-                fill="#FFF"
-                className={styles.arrow}
-              >
-                {" "}
-                {/*<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->*/}
-                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-              </svg>
-            </li>
-            <li className={styles.navLinkWrapper}>
-              <Link href="/project/planetviewer" className={styles.navLink}>
-                Next
-              </Link>{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width={35}
-                height={35}
-                fill="#FFF"
-                className={styles.arrow}
-              >
-                {/*<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->*/}
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-              </svg>
-            </li>
-          </ul>
-        </nav>
+        </div>
+        <PageNav back="billy" next="planetviewer" />
       </main>
     </>
   );

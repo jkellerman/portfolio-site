@@ -47,7 +47,7 @@ const Hero = () => {
           </motion.h1>
           <motion.p className={styles.paragraph} variants={containerVariants}>
             I&apos;m a front end developer, based in the UK, passionate about
-            creating beautiful and functional web apps that enhance user
+            creating clean and functional web apps that enhance user
             experiences.
           </motion.p>
           <motion.a

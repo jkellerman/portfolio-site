@@ -23,9 +23,8 @@ const OtherProjects = () => {
       >
         <h2 className={styles.heading}>Other projects</h2>
         <span className={styles.subheading}>
-          The following are some experimental projects that may contain less
-          efficient code, but serve as a testament to how much I have improved
-          as a developer.
+          Some experimental projects that may contain less efficient code, but
+          serve as a testament to how much I have improved as a developer.
         </span>
       </motion.div>
       <motion.ul

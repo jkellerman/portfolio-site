@@ -17,13 +17,13 @@ export const ProjectList = [
       { id: 5, name: "React Query" },
       { id: 6, name: "Vercel" },
       { id: 7, name: "SSR" },
-      { id: 8, name: "ISR" },
     ],
     overview:
-      "I built Reelgood from the ground up whilst making design decisions along the way with user experience and performance in mind. I am continously improving the app as I pick up new skills and technologies and plan on integrating a backend to allow users to bookmark movies and shows they are interested in.",
+      "I built Reelgood from the ground up whilst making design decisions along the way with user experience and performance in mind. I am continously improving the app as I pick up new skills and technologies.",
     solution: [
-      "Next.js was the logical choice for this web app, offering the ability to set up dynamic page and API routes with ease, along with various rendering options that can lead to improved performance.  After careful consideration, Incremental Static Regeneration (ISR) was chosen for the home page, as the data from the TMDB API doesn't change too frequently but still needs to be fresh. This allowed for serving dynamic data statically, resulting in faster load times.",
-      " Server-side rendering (SSR) was implemented for individual movies/series pages to improve SEO. React Query was used for the interior genre and search pages, which involve infinite scrolling, to reduce the amount of code needed and improve performance by handling data caching and background refetching.",
+      "Next.js was the logical choice for this web app, offering the ability to set up dynamic page and API routes with ease, along with various rendering options that can lead to improved performance. The app uses server-side rendering with stale-while-revalidate cache-control headers to ensure the data for what is trending is always fresh while improving app performance by reducing network requests.",
+
+      "React Query was used for the interior genre and search pages, which involve infinite scrolling, to reduce the amount of code needed for fetching data and improving performance by handling data caching and background refetching.",
     ],
     challenges: [
       "One of the main challenges I encountered was image optimisation due to the large volume of images in the application. Using the Next/Image component or a custom loader would have incurred some costs, therefore, I opted out of the image optimisation offered by Vercel which would have generated images in next-gen format, resized them for different screen sizes, and prevented cumulative layout shifts.",
@@ -85,6 +85,6 @@ export const ProjectList = [
     challenges:
       "As this was my first collaborative project, one of the obstacles I faced was getting acquainted with the existing codebase. Additionally, I had to familiarise myself with new technologies while adhering to coding standards and design systems, which was a challenging task. Despite the challenges, the project helped me develop skills in project management, communication, and problem-solving.",
     lessons:
-      "Collaborating with an experienced software engineer was invaluable to me. I gained knowledge of best practices for collaborating on app development, and I have since applied this knowledge to my own projects. However, the most significant takeaway for me was learning how to use Git in a pair programming scenario. While I was already familiar with Git, I learned best practices for making commits, managing conflicts, and participating in code reviews.",
+      "Collaborating with a more experienced software engineer was invaluable to me. I gained knowledge of best practices for collaborating on app development, and I have since applied this knowledge to my own projects. However, the most significant takeaway for me was learning how to use Git in a pair programming scenario. While I was already familiar with Git, I learned best practices for making commits, managing conflicts, and participating in code reviews.",
   },
 ];

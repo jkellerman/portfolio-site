@@ -1,11 +1,13 @@
 import Head from "next/head";
 import styles from "@styles/project.module.css";
 import { ProjectList } from "@src/data/Projects";
-import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/assets/planet-viewer-desktop.webp";
 import background from "@/public/assets/bg-2.webp";
 import Nav from "@src/components/Nav/Nav";
+import ProjectDetails from "@src/components/ProjectDetails/ProjectDetails";
+import ProjectContent from "@src/components/ProjectContent/ProjectContent";
+import PageNav from "@src/components/PageNav/PageNav";
 
 const Project = () => {
   return (
@@ -28,125 +30,44 @@ const Project = () => {
         />
       </div>
       <main className={styles.main}>
-        <section className={styles.descriptionContainer}>
-          <div className={styles.projectDetailsContainer}>
-            <h1 className={styles.headingTop}>{ProjectList[1].name}</h1>
-            <p className={styles.outline}>{ProjectList[1].outline}</p>
-            <div className={styles.tickerWrapper}>
-              <div className={styles.tickerTrack}>
-                {ProjectList[1].stack.map((tech) => (
-                  <span key={tech.id} className={styles.tickerItem}>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-              <div className={styles.tickerTrack}>
-                {ProjectList[1].stack.map((tech) => (
-                  <span key={tech.id} className={styles.tickerItem}>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className={styles.linksContainer}>
-              {ProjectList[1].link && (
-                <div className={styles.linkWrapper}>
-                  <a
-                    href={ProjectList[1].link}
-                    className={styles.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Live
-                  </a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 256 256"
-                    focusable="false"
-                    className={styles.externalArrow}
-                    width={20}
-                    height={20}
-                  >
-                    <g weight="bold">
-                      <line
-                        x1="64"
-                        y1="192"
-                        x2="192"
-                        y2="64"
-                        fill="none"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="24"
-                      ></line>
-                      <polyline
-                        points="88 64 192 64 192 168"
-                        fill="none"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="24"
-                      ></polyline>
-                    </g>
-                  </svg>
-                </div>
-              )}
-              <div className={styles.linkWrapper}>
-                <a
-                  href={ProjectList[1].github}
-                  className={styles.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Code
-                </a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  focusable="false"
-                  className={styles.externalArrow}
-                  width={20}
-                  height={20}
-                >
-                  <g weight="bold">
-                    <line
-                      x1="64"
-                      y1="192"
-                      x2="192"
-                      y2="64"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></line>
-                    <polyline
-                      points="88 64 192 64 192 168"
-                      fill="none"
-                      stroke="#FFF"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="24"
-                    ></polyline>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Project overview</h2>
-            <p className={styles.paragraph}>{ProjectList[1].overview}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>The Solution</h2>
-            <p className={styles.paragraph}>{ProjectList[1].solution}</p>
-          </div>
-          <div className={styles.contentContainer}>
-            <h2 className={styles.heading}>Challenges</h2>
-            <p className={styles.paragraph}>{ProjectList[1].challenges}</p>
-          </div>
+        <div className={styles.descriptionContainer}>
+          <ProjectDetails project={1} />
+        </div>
+        <div>
+          <ProjectContent heading="Project overview">
+            <p className={styles.paragraph}>
+              This project was initially a challenge from Frontend Mentor, but I
+              decided to expand it by adding some exciting extra features. I was
+              motivated to create an app that not only met the requirements of
+              the challenge, but also allowed users to interact with{" "}
+              <span className={styles.highlighted}>3D Models </span>
+              and experience the planets in{" "}
+              <span className={styles.highlighted}>augmented reality</span>.
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="The solution">
+            <p className={styles.paragraph}>
+              To accomplish my goals, I used React and React Router DOM to
+              create a single-page application with eight routes for each
+              planet. As I switched routes, I had to manage the state of the
+              current active tab, and this gave me the opportunity to use the
+              <span className={styles.highlighted}> Context API</span> for the
+              first time, which helped me avoid unnecessary prop drilling. I
+              also utilised Styled-Components to efficiently build components
+              for all screen sizes with a mobile-first workflow.
+            </p>
+          </ProjectContent>
+          <ProjectContent heading="Challenges">
+            <p className={styles.paragraph}>
+              While building the app, I encountered some challenges related to
+              the UI. One of the most significant was the time it took for the
+              3D models to load. I mitigated this issue by creating a poster
+              file that displays before the model is rendered. This gave the
+              users something to see while the model loads, improving their
+              experience.
+            </p>
+          </ProjectContent>
+
           <div className={styles.screenshotContainer}>
             <a
               className={styles.screenshotWrapper}
@@ -169,45 +90,8 @@ const Project = () => {
               />
             </a>
           </div>
-        </section>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            <li className={styles.navLinkWrapper}>
-              <Link href="/project/reelgood" className={styles.navLink}>
-                {" "}
-                Back
-              </Link>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width={35}
-                height={35}
-                fill="#FFF"
-                className={styles.arrow}
-              >
-                {" "}
-                {/*<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->*/}
-                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-              </svg>
-            </li>
-            <li className={styles.navLinkWrapper}>
-              <Link href="/project/billy" className={styles.navLink}>
-                Next
-              </Link>{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                width={35}
-                height={35}
-                fill="#FFF"
-                className={styles.arrow}
-              >
-                {/*<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->*/}
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-              </svg>
-            </li>
-          </ul>
-        </nav>
+        </div>
+        <PageNav back="reelgood" next="billy" />
       </main>
     </>
   );

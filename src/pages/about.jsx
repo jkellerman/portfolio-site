@@ -89,10 +89,10 @@ const About = () => {
               }}
             >
               Hey there, welcome to my portfolio website! I&apos;m a front-end
-              developer based in the UK and I absolutely love building clean and
-              user-friendly web applications. With four years of experience
-              working for a software company in the financial services industry,
-              I was exposed to developer teams and their work, which sparked my
+              developer based in the UK and I&apos;m a sucker for clean designs
+              that prioritise user experience. During a four year stint working
+              for a software company in the financial services industry, I was
+              exposed to developer teams and their work, which sparked my
               interest in coding. Since then, I&apos;ve been teaching myself the
               ins and outs of web development and I&apos;ve never looked back.
             </motion.p>
@@ -127,10 +127,15 @@ const About = () => {
                 damping: 60,
               }}
             >
-              Right now, my go-to stack is TypeScript, Next.js with either
-              Styled Components or CSS Modules. But I&apos;m always up for
-              learning about the latest web technologies and trying out new
-              techniques to level up my skills and stay ahead of the game.
+              Right now, my go-to stack is{" "}
+              <span className={styles.highlighted}>TypeScript</span>,{" "}
+              <span className={styles.highlighted}>Next.js </span>
+              with either{" "}
+              <span className={styles.highlighted}>Styled Components </span> or
+              <span className={styles.highlighted}> CSS Modules</span>. But
+              I&apos;m always up for learning about the latest web technologies
+              and trying out new techniques to level up my skills and stay ahead
+              of the game.
             </motion.p>
           </div>
         </div>
