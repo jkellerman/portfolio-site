@@ -8,25 +8,17 @@ import { containerVariants, variants } from "@src/utils/animations";
 const OtherProjects = () => {
   return (
     <section className={styles.wrapper}>
-      <motion.div
-        className={styles.headingWrapper}
-        variants={variants}
-        initial="hidden"
-        whileInView="visible"
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          mass: 1,
-          damping: 40,
-        }}
-        viewport={{ once: true, amount: "some" }}
-      >
-        <h2 className={styles.heading}>Other projects</h2>
-        <span className={styles.subheading}>
-          Some experimental projects that may contain less efficient code, but
-          serve as a testament to how much I have improved as a developer.
-        </span>
-      </motion.div>
+      <div className={styles.headingWrapper}>
+        <motion.h2
+          className={styles.heading}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: "some" }}
+        >
+          Other projects
+        </motion.h2>
+      </div>
       <motion.ul
         className={styles.projectsGrid}
         variants={containerVariants}
