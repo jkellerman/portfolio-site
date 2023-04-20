@@ -1,12 +1,33 @@
 import styles from "../BackToTopButton/BackToTopButton.module.css";
+import { motion } from "framer-motion";
 
 const BackToTopButton = () => {
   const handleScroll = () => {
     document.querySelector("#projects").scrollIntoView({ behavior: "smooth" });
   };
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 1,
+      },
+    },
+  };
+
   return (
     <div className={styles.container}>
-      <button className={styles.button} onClick={handleScroll}>
+      <motion.button
+        className={styles.button}
+        onClick={handleScroll}
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: "some" }}
+      >
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +40,7 @@ const BackToTopButton = () => {
           </g>
         </svg>
         Back to projects
-      </button>
+      </motion.button>
     </div>
   );
 };
