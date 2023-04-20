@@ -47,28 +47,21 @@ const Project = () => {
               Next.js was the logical choice for this web app, offering the
               ability to set up dynamic page and API routes with ease, along
               with various rendering options that can lead to improved
-              performance. The app uses{" "}
-              <span className={styles.highlighted}>server-side rendering</span>{" "}
-              with{" "}
-              <span className={styles.highlighted}>
-                stale-while-revalidate cache-control headers
-              </span>{" "}
-              to ensure the data for what is trending is always fresh while
-              improving app performance by reducing network requests.
+              performance. The app uses server-side rendering with
+              stale-while-revalidate cache-control headers to ensure the data
+              for what is trending is always fresh while improving app
+              performance by reducing network requests.
             </p>
             <p className={styles.paragraph}>
               React Query was used for the interior genre and search pages,
-              which involve{" "}
-              <span className={styles.highlighted}>infinite scrolling</span> ,
-              to reduce the amount of code needed for fetching data and
-              improving performance by handling data caching and background
-              refetching.
+              which involve infinite scrolling , to reduce the amount of code
+              needed for fetching data and improving performance by handling
+              data caching and background refetching.
             </p>
           </ProjectContent>
           <ProjectContent heading="Challenges">
             <p className={styles.paragraph}>
-              One of the main challenges I encountered was{" "}
-              <span className={styles.highlighted}>image optimisation </span>
+              One of the main challenges I encountered was image optimisation
               due to the large volume of images in the application. Using the
               Next/Image component or a custom loader would have incurred some
               costs, therefore, I opted out of the offered by Vercel which would

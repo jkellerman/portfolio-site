@@ -61,10 +61,6 @@
   border-radius: 25px;
 }
 
-.highlighted {
-  color: var(--primary-light);
-}
-
 @media (min-width: 48em) {
   .contentWrapper {
     width: unset;

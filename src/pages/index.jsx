@@ -4,6 +4,7 @@ import Projects from "@src/components/Projects/Projects";
 import OtherProjects from "@src/components/OtherProjects/OtherProjects";
 import Contact from "@src/components/Contact/Contact";
 import Nav from "@src/components/Nav/Nav";
+import BackToTopButton from "@src/components/BackToTopButton/BackToTopButton";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Projects />
         <OtherProjects />
         <Contact />
+        <BackToTopButton />
       </main>
     </>
   );

@@ -3,7 +3,7 @@ import { OtherProjectsLists } from "@src/data/OtherProjects";
 import Image from "next/image";
 import folder from "@/public/assets/folder-solid.svg";
 import { motion } from "framer-motion";
-import { containerVariants, variants } from "@src/utils/animations";
+import { containerVariants } from "@src/utils/animations";
 
 const OtherProjects = () => {
   return (

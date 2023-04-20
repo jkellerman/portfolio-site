@@ -37,14 +37,8 @@ const Project = () => {
           <ProjectContent heading="Project overview">
             <p className={styles.paragraph}>
               As a collaborative effort with a software engineer, my primary
-              responsibilities for this project included building reusable
-              components, resolving issues in the existing codebase, integrating
-              <span className={styles.highlighted}> login authentication</span>,
-              and writing{" "}
-              <span className={styles.highlighted}>
-                unit and integration tests{" "}
-              </span>
-              .
+              responsibilities for this project was developing reusable
+              components and features within an existing codebase.
             </p>
           </ProjectContent>
           <ProjectContent heading="The solution">
@@ -65,10 +59,9 @@ const Project = () => {
               As this was my first collaborative project, one of the obstacles I
               faced was getting acquainted with the existing codebase.
               Additionally, I had to familiarise myself with new technologies
-              while adhering to coding standards and design systems, which was a
-              challenging task. Despite the challenges, the project helped me
-              develop skills in project management, communication, and
-              problem-solving.
+              while adhering to coding standards, which was a challenging task.
+              Despite the challenges, the project helped me develop skills in
+              project management, communication, and problem-solving.
             </p>
           </ProjectContent>
           <ProjectContent heading="Lessons learned">
@@ -77,12 +70,10 @@ const Project = () => {
               invaluable to me. I gained knowledge of best practices for
               collaborating on app development, and I have since applied this
               knowledge to my own projects. However, the most significant
-              takeaway for me was learning how to use Git in a{" "}
-              <span className={styles.highlighted}>pair programming </span>
+              takeaway for me was learning how to use Git in a pair programming
               scenario. While I was already familiar with Git, I learned best
               practices for making commits, managing conflicts, and
-              participating in{" "}
-              <span className={styles.highlighted}>code reviews</span>.
+              participating in code reviews.
             </p>
           </ProjectContent>
           <div className={styles.screenshotContainer}>

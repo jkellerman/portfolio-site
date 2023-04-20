@@ -6,7 +6,7 @@ export const ProjectList = [
     desktop: "/assets/reelgood-desktop.webp",
     mobile: "/assets/reelgood-mobile.webp",
     outline:
-      "A streaming search engine, where you can discover what's trending, search your favourite titles and find where to stream them on major platforms.",
+      "Easily discover what's trending, search your favourite titles and find where to stream them on major platforms.",
     link: "https://reelgood.vercel.app/",
     github: "https://github.com/jkellerman/Reelgood",
     stack: [

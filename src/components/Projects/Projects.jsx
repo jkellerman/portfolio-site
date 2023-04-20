@@ -8,7 +8,7 @@ import { variants } from "@src/utils/animations";
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects">
       <h1 className={styles.heading}>
         <span className={styles.heading1}>Selected</span>
         <span className={styles.heading2}>Work</span>

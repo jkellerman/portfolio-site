@@ -87,10 +87,6 @@
   height: auto;
 }
 
-.highlighted {
-  color: var(--primary-light);
-}
-
 @media (min-width: 48em) {
   .backgroundWrapper,
   .background {

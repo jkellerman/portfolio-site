@@ -127,15 +127,10 @@ const About = () => {
                 damping: 60,
               }}
             >
-              Right now, my go-to stack is{" "}
-              <span className={styles.highlighted}>TypeScript</span>,{" "}
-              <span className={styles.highlighted}>Next.js </span>
-              with either{" "}
-              <span className={styles.highlighted}>Styled Components </span> or
-              <span className={styles.highlighted}> CSS Modules</span>. But
-              I&apos;m always up for learning about the latest web technologies
-              and trying out new techniques to level up my skills and stay ahead
-              of the game.
+              Right now, my go-to stack is TypeScript, Next.js with either
+              Styled Components or CSS Modules. But I&apos;m always up for
+              learning about the latest web technologies and trying out new
+              techniques to level up my skills and stay ahead of the game.
             </motion.p>
           </div>
         </div>

@@ -39,10 +39,8 @@ const Project = () => {
               This project was initially a challenge from Frontend Mentor, but I
               decided to expand it by adding some exciting extra features. I was
               motivated to create an app that not only met the requirements of
-              the challenge, but also allowed users to interact with{" "}
-              <span className={styles.highlighted}>3D Models </span>
-              and experience the planets in{" "}
-              <span className={styles.highlighted}>augmented reality</span>.
+              the challenge, but also allowed users to interact with 3D Models
+              and experience the planets in augmented reality.
             </p>
           </ProjectContent>
           <ProjectContent heading="The solution">
@@ -51,10 +49,10 @@ const Project = () => {
               create a single-page application with eight routes for each
               planet. As I switched routes, I had to manage the state of the
               current active tab, and this gave me the opportunity to use the
-              <span className={styles.highlighted}> Context API</span> for the
-              first time, which helped me avoid unnecessary prop drilling. I
-              also utilised Styled-Components to efficiently build components
-              for all screen sizes with a mobile-first workflow.
+              Context API for the first time, which helped me avoid unnecessary
+              prop drilling. I also utilised Styled-Components to efficiently
+              build components for all screen sizes with a mobile-first
+              workflow.
             </p>
           </ProjectContent>
           <ProjectContent heading="Challenges">
