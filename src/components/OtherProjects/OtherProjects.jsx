@@ -5,6 +5,24 @@ import folder from "@/public/assets/folder-solid.svg";
 import { motion } from "framer-motion";
 import { containerVariants } from "@src/utils/animations";
 
+const listVariants = {
+  hidden: {
+    opacity: 0,
+    y: 120,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 160,
+      mass: 1,
+      damping: 60,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const OtherProjects = () => {
   return (
     <section className={styles.wrapper}>
@@ -21,7 +39,7 @@ const OtherProjects = () => {
       </div>
       <motion.ul
         className={styles.projectsGrid}
-        variants={containerVariants}
+        variants={listVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: "some" }}
@@ -30,7 +48,7 @@ const OtherProjects = () => {
           <motion.li
             key={item.id}
             className={styles.project}
-            variants={containerVariants}
+            variants={listVariants}
           >
             <header>
               <div className={styles.projectTop}>
