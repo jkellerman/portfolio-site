@@ -47,10 +47,11 @@ const Project = () => {
               Next.js was the logical choice for this web app, offering the
               ability to set up dynamic page and API routes with ease, along
               with various rendering options that can lead to improved
-              performance. The app uses server-side rendering with
-              stale-while-revalidate cache-control headers to ensure the data
-              for what is trending is always fresh while improving app
-              performance by reducing network requests.
+              performance. The app uses ISR for the home page for speedy page
+              loads, and server-side rendering with stale-while-revalidate
+              cache-control headers to ensure the data for individual
+              movies/series are always fresh while improving app performance by
+              reducing network requests.
             </p>
             <p className={styles.paragraph}>
               React Query was used for the interior genre and search pages,

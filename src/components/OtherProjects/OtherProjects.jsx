@@ -32,7 +32,7 @@ const OtherProjects = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: "some" }}
+          viewport={{ once: true, amount: "all" }}
         >
           Other projects
         </motion.h2>
@@ -42,7 +42,7 @@ const OtherProjects = () => {
         variants={listVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: "some" }}
+        viewport={{ once: true, amount: "all" }}
       >
         {OtherProjectsLists.map((item) => (
           <motion.li

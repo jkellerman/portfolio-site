@@ -27,15 +27,15 @@ export const OtherProjectsLists = [
   },
   {
     id: 3,
-    title: "Lets get quizzical",
+    title: "Devfinder",
     outline:
-      "A multi-subject quiz app. Put your knowledge to the test and improve your understanding across a variety of topics.",
-    link: "https://lets-get-quizzical.netlify.app",
-    github: "https://github.com/jkellerman/lets-get-quizzical",
+      "Explore GitHub profiles to gain insights into users' information and repository stats.",
+    link: "https://jkellerman.github.io/github-user-search-app",
+    github: "https://github.com/jkellerman/github-user-search-app",
     stack: [
-      { id: 1, name: "React" },
+      { id: 1, name: "JavaScript" },
       { id: 2, name: "SCSS" },
-      { id: 3, name: "OpenTDB API" },
+      { id: 3, name: "Github API" },
     ],
   },
 ];

@@ -17,6 +17,7 @@ export const ProjectList = [
       { id: 5, name: "React Query" },
       { id: 6, name: "Vercel" },
       { id: 7, name: "SSR" },
+      { id: 7, name: "ISR" },
     ],
   },
   {

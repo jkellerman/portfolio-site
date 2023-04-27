@@ -27,7 +27,7 @@ const ProjectDetails = ({ project }) => {
               width={20}
               height={20}
             >
-              <g weight="bold">
+              <g>
                 <line
                   x1="64"
                   y1="192"
@@ -68,7 +68,7 @@ const ProjectDetails = ({ project }) => {
             width={20}
             height={20}
           >
-            <g weight="bold">
+            <g>
               <line
                 x1="64"
                 y1="192"

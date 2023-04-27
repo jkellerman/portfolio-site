@@ -53,7 +53,7 @@ const Hero = () => {
           <motion.a
             className={styles.button}
             variants={containerVariants}
-            href="mailto: joshkellerman9@gmail.com"
+            href="mailto:joshkellerman9@gmail.com"
           >
             Get in touch
           </motion.a>

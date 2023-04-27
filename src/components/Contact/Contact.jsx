@@ -18,7 +18,7 @@ const Contact = () => {
         Got a project? Lets talk
       </motion.h1>
       <motion.div className={styles.emailWrapper} variants={containerVariants}>
-        <a href="mailto: joshkellerman9@gmail.com" className={styles.email}>
+        <a href="mailto:joshkellerman9@gmail.com" className={styles.email}>
           <span>Email me</span>
           <span>
             <svg
@@ -27,7 +27,7 @@ const Contact = () => {
               focusable="false"
               className={styles.contactArrow}
             >
-              <g weight="bold">
+              <g>
                 <line
                   x1="64"
                   y1="192"

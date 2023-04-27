@@ -59,7 +59,7 @@ const Nav = () => {
                 </li>
                 <li className={styles.navListItemWrapper}>
                   <a
-                    href="mailto: joshkellerman9@gmail.com"
+                    href="mailto:joshkellerman9@gmail.com"
                     className={styles.navListItem}
                   >
                     Contact
