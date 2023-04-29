@@ -2,30 +2,8 @@ import styles from "../Hero/Hero.module.css";
 import Spheres from "../Spheres/Spheres";
 import { motion } from "framer-motion";
 import { containerVariants } from "@src/utils/animations";
-import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const [image, setImage] = useState("/assets/icon.png");
-  const [lastScrollPosition, setLastScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPosition = window.scrollY;
-
-      if (currentScrollPosition > lastScrollPosition) {
-        setImage("/assets/icon2.png");
-      } else {
-        setImage("/assets/icon.png");
-      }
-
-      setLastScrollPosition(currentScrollPosition);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollPosition]);
-
   return (
     <section className={styles.hero}>
       <div className={styles.heroWrapper}>
@@ -45,13 +23,7 @@ const Hero = () => {
           }}
         >
           <div className={styles.imageWrapper}>
-            <div
-              className={styles.image}
-              style={{
-                backgroundImage: `url(${image})`,
-                transition: "all 300ms ease-in",
-              }}
-            ></div>
+            <div className={styles.image}></div>
           </div>
         </motion.div>
         <motion.div

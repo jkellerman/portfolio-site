@@ -128,12 +128,12 @@
   }
 
   .sphereAbout:nth-child(3) {
-    bottom: 0rem;
+    bottom: -10rem;
   }
 
   .sphereAbout:nth-child(4) {
-    right: -3rem;
-    bottom: 2rem;
+    right: 0rem;
+    bottom: -6rem;
   }
 }
 
@@ -151,5 +151,14 @@
   }
   .sphere:nth-child(4) {
     bottom: 5rem;
+  }
+
+  .sphereAbout:nth-child(3) {
+    bottom: 0rem;
+  }
+
+  .sphereAbout:nth-child(4) {
+    right: -3rem;
+    bottom: 2rem;
   }
 }

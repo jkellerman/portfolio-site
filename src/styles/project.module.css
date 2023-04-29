@@ -12,7 +12,6 @@
   left: 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  animation: fade 250ms ease-in;
 }
 
 .background {
@@ -139,14 +138,5 @@
 @media (min-width: 64em) {
   .paragraph {
     font-size: var(--body-l);
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

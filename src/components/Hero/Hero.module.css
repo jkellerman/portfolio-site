@@ -50,21 +50,6 @@
   background-size: 100%;
 }
 
-.imageContainer:hover .imageWrapper .image {
-  background-image: url(/assets/icon2.png);
-  /* animation: fade 500ms ease-in; */
-  transition: all 300ms ease-in;
-}
-
-/* .image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: inherit;
-    transform: translate(-1%, 2%);
-    background-color: transparent;
-  } */
-
 .name {
   font-family: var(--ff-heading);
   font-size: var(--heading-xs);
@@ -143,17 +128,5 @@
 @media (min-width: 75em) {
   .button {
     font-size: var(--body-l);
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
   }
 }
