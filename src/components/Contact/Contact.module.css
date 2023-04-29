@@ -26,29 +26,41 @@
   width: 75px;
   height: 75px;
   transform: translateY(-20%);
+  position: relative;
 }
 
-.image {
+.image,
+.image2 {
   width: 100%;
   height: 100%;
-  background-image: url(/assets/icon.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  transition: all 350ms ease-in;
 }
 
-@media (hover: hover) {
-  .email:hover {
-    color: var(--white);
-  }
-  .emailWrapper:hover .imageContainer > .imageWrapper > .image {
-    background-image: url(/assets/icon2.png);
-  }
+.image {
+  opacity: 1;
+  background-image: url(/assets/icon.png);
+  transition: opacity 400ms ease-in;
+}
 
-  .imageContainer:not(:hover) .imageWrapper .image {
-    background-image: url(/assets/icon.png);
-  }
+.image2 {
+  background-image: url(/assets/icon2.png);
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.email:hover {
+  color: var(--white);
+}
+.emailWrapper:hover .imageContainer > .imageWrapper > .image {
+  opacity: 0;
+}
+.emailWrapper:hover .imageContainer > .imageWrapper > .image2 {
+  opacity: 1;
 }
 
 .heading,
@@ -70,12 +82,24 @@
   .heading,
   .email {
     font-size: var(--h2-l);
-    /* line-height: 2rem; */
     margin-top: 1rem;
   }
 
   .contactArrow {
     width: 60px;
     height: 60px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+
+  /* 15% {
+    opacity: 0.8;
+  } */
+  to {
+    opacity: 1;
   }
 }

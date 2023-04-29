@@ -23,6 +23,7 @@ const Contact = () => {
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
               <div className={styles.image}></div>
+              <div className={styles.image2}></div>
             </div>
           </div>
         </a>
