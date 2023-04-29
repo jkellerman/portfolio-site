@@ -2,16 +2,36 @@ import styles from "../Hero/Hero.module.css";
 import Spheres from "../Spheres/Spheres";
 import { motion } from "framer-motion";
 import { containerVariants } from "@src/utils/animations";
-import Image from "next/image";
-import img from "@/public/assets/icon.png";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [image, setImage] = useState("/assets/icon.png");
+  const [lastScrollPosition, setLastScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.scrollY;
+
+      if (currentScrollPosition > lastScrollPosition) {
+        setImage("/assets/icon2.png");
+      } else {
+        setImage("/assets/icon.png");
+      }
+
+      setLastScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollPosition]);
+
   return (
     <section className={styles.hero}>
       <div className={styles.heroWrapper}>
         <Spheres />
         <motion.div
-          className={styles.imageWrapper}
+          className={styles.imageContainer}
           initial={{ scale: 0, opacity: 0 }}
           animate={{
             scale: 1,
@@ -24,14 +44,15 @@ const Hero = () => {
             },
           }}
         >
-          <Image
-            src={img}
-            alt="josh kellerman"
-            priority
-            sizes="(max-width: 48em) 33vw,
-            10vw"
-            className={styles.image}
-          />
+          <div className={styles.imageWrapper}>
+            <div
+              className={styles.image}
+              style={{
+                backgroundImage: `url(${image})`,
+                transition: "all 300ms ease-in",
+              }}
+            ></div>
+          </div>
         </motion.div>
         <motion.div
           variants={containerVariants}
