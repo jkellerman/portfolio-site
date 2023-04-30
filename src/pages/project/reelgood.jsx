@@ -26,6 +26,7 @@ const Project = () => {
           alt="background"
           sizes="100vw"
           className={styles.background}
+          placeholder="blur"
           priority
         />
       </div>
@@ -105,6 +106,7 @@ const Project = () => {
                 className={styles.screenshot}
                 sizes="(max-width: 48em) 87.5vw,
               66vw"
+                placeholder="blur"
               />
             </a>
           </div>
