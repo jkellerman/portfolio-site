@@ -4,6 +4,7 @@
   position: relative;
   margin-bottom: 1.5rem;
   white-space: nowrap;
+  font-family: var(--ff-body);
 }
 
 .tickerWrapper::before,

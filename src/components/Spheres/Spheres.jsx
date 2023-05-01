@@ -47,6 +47,7 @@ const Spheres = ({ about }) => {
         <Image
           src={img}
           alt=""
+          priority
           sizes="(max-width: 48em) 4vw,
           (max-width: 75em) 3vw,
                   2.5vw"
@@ -62,6 +63,7 @@ const Spheres = ({ about }) => {
         <Image
           src={img}
           alt=""
+          priority
           sizes="(max-width: 48em) 2.5vw,
           (max-width: 75em) 1vw,
                   0.5vw"

@@ -11,9 +11,6 @@
   --gray-dark: #1c1924;
   --red-error: #e52510;
 
-  --ff-heading: "Poppins", serif;
-  --ff-body: "Inter", sans-serif;
-
   --body-xl: 1.25rem;
   --body-l: 1.125rem;
   --body-m: 1rem;
@@ -52,7 +49,6 @@ html,
 body {
   padding: 0;
   margin: 0 auto;
-  font-family: var(--ff-body);
   background-color: var(--background-dark);
 }
 

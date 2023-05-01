@@ -18,6 +18,7 @@
 
 .subheading {
   color: var(--primary-light);
+  font-family: var(--ff-heading);
 }
 
 .heading {
@@ -30,6 +31,7 @@
 
 .paragraph {
   color: var(--gray);
+  font-family: var(--ff-body);
   font-weight: var(--fw-light);
   line-height: var(--line-height);
   margin-bottom: 1rem;

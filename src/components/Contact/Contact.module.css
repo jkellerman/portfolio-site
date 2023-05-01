@@ -6,6 +6,7 @@
 
 .subheading {
   color: var(--primary-light);
+  font-family: var(--ff-heading);
 }
 
 .emailWrapper {

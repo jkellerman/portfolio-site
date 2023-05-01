@@ -56,6 +56,7 @@
 }
 
 .outline {
+  font-family: var(--ff-body);
   font-size: var(--body-m);
   font-weight: var(--fw-light);
   color: var(--gray);

@@ -36,6 +36,7 @@
 
 .outline {
   color: var(--gray);
+  font-family: var(--ff-body);
   font-size: var(--body-m);
   font-weight: var(--fw-light);
   line-height: var(--line-height);

@@ -11,7 +11,7 @@
 .footerLink {
   color: var(--gray);
   text-align: center;
-  font-weight: var(--fw-light);
+  font-family: var(--ff-body);
 }
 
 .iconsContainer {

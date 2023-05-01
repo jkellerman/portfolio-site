@@ -93,6 +93,7 @@
 
 .outline {
   color: var(--gray);
+  font-family: var(--ff-body);
   font-size: var(--body-s);
   font-weight: var(--fw-light);
 }
@@ -106,6 +107,7 @@
 .stackName {
   color: var(--gray);
   opacity: 0.8;
+  font-family: var(--ff-body);
   font-size: var(--body-xs);
   font-weight: var(--fw-light);
 }
