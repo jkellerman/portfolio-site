@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@styles/project.module.css";
 import { ProjectList } from "@src/data/Projects";
 import Image from "next/image";
-import img from "@/public/assets/reelgood-desktop.webp";
+import img from "@/public/assets/streamhub-desktop.webp";
 import background from "@/public/assets/bg-1.jpg";
 import Nav from "@src/components/Nav/Nav";
 import ProjectDetails from "@src/components/ProjectDetails/ProjectDetails";
@@ -37,10 +37,10 @@ const Project = () => {
         <div>
           <ProjectContent heading="Project overview">
             <p className={styles.paragraph}>
-              I built Reelgood from the ground up whilst making design decisions
-              along the way with user experience and performance in mind. I am
-              continously improving the app as I pick up new skills and
-              technologies.
+              I built StreamHub from the ground up whilst making design
+              decisions along the way with user experience and performance in
+              mind. I am continously improving the app as I pick up new skills
+              and technologies.
             </p>
           </ProjectContent>
           <ProjectContent heading="The solution">
@@ -102,7 +102,7 @@ const Project = () => {
 
               <Image
                 src={img}
-                alt="reelgood web app"
+                alt="streamhub web app"
                 className={styles.screenshot}
                 sizes="(max-width: 48em) 87.5vw,
               66vw"

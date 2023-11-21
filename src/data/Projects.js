@@ -1,23 +1,22 @@
 export const ProjectList = [
   {
     id: 1,
-    name: "reelgood",
-    title: "Reelgood",
-    desktop: "/assets/reelgood-desktop.webp",
-    mobile: "/assets/reelgood-mobile.webp",
+    name: "streamhub",
+    title: "StreamHub",
+    desktop: "/assets/streamhub-desktop.webp",
+    mobile: "/assets/streamhub-mobile.webp",
     outline:
       "Easily discover what's trending, search your favourite titles and find where to stream them on major platforms.",
-    link: "https://reelgood.vercel.app/",
-    github: "https://github.com/jkellerman/Reelgood",
+    link: "https://streamhubtv.vercel.app/",
+    github: "https://github.com/jkellerman/StreamHub",
     stack: [
       { id: 1, name: "Next.js" },
       { id: 2, name: "TypeScript" },
-      { id: 3, name: "CSS Modules" },
+      { id: 3, name: "SCSS Modules" },
       { id: 4, name: "TMDB API" },
       { id: 5, name: "React Query" },
       { id: 6, name: "Vercel" },
       { id: 7, name: "SSR" },
-      { id: 8, name: "ISR" },
     ],
   },
   {
