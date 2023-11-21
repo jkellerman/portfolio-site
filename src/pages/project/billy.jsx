@@ -95,7 +95,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <PageNav back="planetviewer" next="reelgood" />
+        <PageNav back="planetviewer" next="streamhub" />
       </main>
     </>
   );
