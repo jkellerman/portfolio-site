@@ -27,15 +27,15 @@ export const OtherProjectsLists = [
   },
   {
     id: 3,
-    title: "Tip calculator",
+    title: "Todo App",
     outline:
-      "Explore GitHub profiles to gain insights into users' information and repository stats.",
-    link: "https://jkellerman.github.io/github-user-search-app",
-    github: "https://github.com/jkellerman/github-user-search-app",
+      "Classic todo app with theme toggle, drag and drop and utilises local storage.",
+    link: "https://jkellerman.github.io/todo-app-main/",
+    github: "https://github.com/jkellerman/todo-app-main",
     stack: [
-      { id: 1, name: "JavaScript" },
+      { id: 1, name: "HTML" },
       { id: 2, name: "SCSS" },
-      { id: 3, name: "Github API" },
+      { id: 3, name: "JavaScript" },
     ],
   },
 ];
