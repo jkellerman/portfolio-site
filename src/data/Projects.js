@@ -6,7 +6,7 @@ export const ProjectList = [
     desktop: "/assets/streamhub-desktop.webp",
     mobile: "/assets/streamhub-mobile.webp",
     outline:
-      "Easily discover what's trending, search your favourite titles and find where to stream them on major platforms.",
+      "A one stop place for movies and tv series on all streaming platforms. Also provides recommendations on what to watch based on user preferences.",
     link: "https://streamhubtv.vercel.app/",
     github: "https://github.com/jkellerman/StreamHub",
     stack: [
@@ -17,6 +17,7 @@ export const ProjectList = [
       { id: 5, name: "React Query" },
       { id: 6, name: "Vercel" },
       { id: 7, name: "SSR" },
+      { id: 8, name: "Framer motion" },
     ],
   },
   {

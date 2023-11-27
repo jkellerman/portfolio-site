@@ -27,7 +27,7 @@ export const OtherProjectsLists = [
   },
   {
     id: 3,
-    title: "Devfinder",
+    title: "Tip calculator",
     outline:
       "Explore GitHub profiles to gain insights into users' information and repository stats.",
     link: "https://jkellerman.github.io/github-user-search-app",

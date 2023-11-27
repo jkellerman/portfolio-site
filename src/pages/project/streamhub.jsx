@@ -48,17 +48,15 @@ const Project = () => {
               Next.js was the logical choice for this web app, offering the
               ability to set up dynamic page and API routes with ease, along
               with various rendering options that can lead to improved
-              performance. The app uses ISR for the home page for speedy page
-              loads, and server-side rendering with stale-while-revalidate
-              cache-control headers to ensure the data for individual
-              movies/series are always fresh while improving app performance by
-              reducing network requests.
+              performance. The app uses a mixture of SSG, CSR & SSR for speedy
+              page loads which provided me the opportunity to familiarise myself
+              with web performance and SEO best practices.
             </p>
             <p className={styles.paragraph}>
               React Query was used for the interior genre and search pages,
-              which involve infinite scrolling , to reduce the amount of code
-              needed for fetching data and improving performance by handling
-              data caching and background refetching.
+              which involve infinite query , to reduce the amount of code needed
+              for fetching data and improving performance by handling data
+              caching and background refetching.
             </p>
           </ProjectContent>
           <ProjectContent heading="Challenges">
@@ -83,8 +81,7 @@ const Project = () => {
               Initially, my code was not clean, and instead of refactoring, I
               completed tasks and moved on to the next. I have since made a
               point of refactoring my code for better readability and
-              organisation. I also implemented the atomic design system to
-              improve directory organisation and consistency.
+              organisation.
             </p>
           </ProjectContent>
           <div className={styles.screenshotContainer}>
