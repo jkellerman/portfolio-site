@@ -3,7 +3,6 @@ import styles from "@styles/project.module.css";
 import { ProjectList } from "@src/data/Projects";
 import Image from "next/image";
 import img from "@/public/assets/planet-viewer-desktop.webp";
-import background from "@/public/assets/bg-2.jpg";
 import Nav from "@src/components/Nav/Nav";
 import ProjectDetails from "@src/components/ProjectDetails/ProjectDetails";
 import ProjectContent from "@src/components/ProjectContent/ProjectContent";
@@ -35,17 +34,9 @@ const Project = () => {
         />
       </Head>
       <Nav />
-      <div className={styles.backgroundWrapper}>
-        <Image
-          src={background}
-          alt="background"
-          sizes="100vw"
-          className={styles.background}
-          placeholder="blur"
-          blurDataURL={rgbDataURL(11, 15, 16)}
-          priority
-        />
-      </div>
+      <div
+        className={`${styles.backgroundWrapper} ${styles.background2}`}
+      ></div>
       <main className={styles.main}>
         <div className={styles.descriptionContainer}>
           <ProjectDetails project={1} />
